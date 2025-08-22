@@ -1,0 +1,7 @@
+requests
+pillow
+pytesseract
+google-api-python-client
+google-auth
+speechrecognition
+pyaudio
