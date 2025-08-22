@@ -5,9 +5,8 @@ Fully autonomous, self-healing, and task-executing AI.
 """
 
 import json, time, threading
-from utils import google, social, nova, zapier, rapidapi, huggingface, stock, vision, security, developer_protocol
-from voice import wake_word, speech_handler
-
+from utils import from googleapiclient.discovery import build, 
+from voice import wake_word, speech_handle
 # Load tasks
 try:
     with open("tasks.json") as f:
