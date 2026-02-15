@@ -1,0 +1,204 @@
+{
+  "workflow_name": "Print on Demand Automation",
+  "description": "Automated print-on-demand business with zero inventory",
+  "platforms": ["Printful", "Printify", "Redbubble", "Teespring", "Etsy", "Shopify", "ChatGPT", "Canva", "Midjourney"],
+  "products": [
+    "T-shirts",
+    "Hoodies",
+    "Mugs",
+    "Phone cases",
+    "Posters",
+    "Canvas prints",
+    "Tote bags",
+    "Stickers",
+    "Notebooks",
+    "Pillows"
+  ],
+  "tasks": [
+    {
+      "task_id": 1,
+      "name": "Niche Research",
+      "platform": "ChatGPT + Google Trends",
+      "automation_tool": "n8n",
+      "description": "Find profitable niches",
+      "frequency": "weekly",
+      "steps": [
+        "Use ChatGPT to brainstorm niches",
+        "Check Google Trends for demand",
+        "Analyze competition on Etsy/Amazon",
+        "Validate with Facebook Audience Insights",
+        "Select 3-5 niches to target"
+      ],
+      "profitable_niches": [
+        "Pet owners",
+        "Nurses/doctors",
+        "Teachers",
+        "Gamers",
+        "Fitness enthusiasts",
+        "Quotes and motivation",
+        "Holidays and occasions",
+        "Hobbies (fishing, hiking, etc.)"
+      ]
+    },
+    {
+      "task_id": 2,
+      "name": "Design Creation",
+      "platform": "Canva + Midjourney",
+      "automation_tool": "Semi-automated",
+      "description": "Create print-ready designs",
+      "frequency": "daily",
+      "steps": [
+        "Generate design ideas with ChatGPT",
+        "Create graphics in Canva",
+        "Use Midjourney for AI art (optional)",
+        "Ensure designs are print-ready (300 DPI)",
+        "Create variations for different products",
+        "Save to organized folders"
+      ],
+      "design_types": [
+        "Typography/quotes",
+        "Illustrations",
+        "Patterns",
+        "Mascots",
+        "Minimalist designs",
+        "Vintage styles"
+      ],
+      "output": "designs/"
+    },
+    {
+      "task_id": 3,
+      "name": "Product Mockups",
+      "platform": "Printful/Printify",
+      "automation_tool": "Bulk upload",
+      "description": "Generate product mockups",
+      "frequency": "per design",
+      "steps": [
+        "Upload designs to POD platform",
+        "Select products to apply design",
+        "Generate mockups automatically",
+        "Review and approve mockups",
+        "Export for listings"
+      ]
+    },
+    {
+      "task_id": 4,
+      "name": "Store Setup",
+      "platform": "Etsy + Shopify + Redbubble",
+      "description": "Set up selling platforms",
+      "frequency": "one-time setup",
+      "steps": [
+        "Create Etsy shop",
+        "Set up Shopify store with Printful",
+        "Register on Redbubble/Teespring",
+        "Connect POD platforms",
+        "Configure payment and shipping"
+      ]
+    },
+    {
+      "task_id": 5,
+      "name": "Product Listing",
+      "platform": "Multiple platforms",
+      "automation_tool": "n8n + ChatGPT",
+      "description": "Create optimized listings",
+      "frequency": "daily",
+      "steps": [
+        "Generate SEO titles with ChatGPT",
+        "Write product descriptions",
+        "Add relevant tags/keywords",
+        "Upload mockup images",
+        "Set pricing (2.5-3x production cost)",
+        "Publish across platforms"
+      ],
+      "output": "listings.json"
+    },
+    {
+      "task_id": 6,
+      "name": "Pricing Strategy",
+      "platform": "Spreadsheet + Calculator",
+      "description": "Calculate profitable pricing",
+      "frequency": "per product",
+      "pricing_formula": {
+        "production_cost": "From POD platform",
+        "platform_fees": "Etsy 6.5% + $0.20, Shopify $29/mo",
+        "ad_costs": "Estimate 10-20% of price",
+        "profit_margin": "Target 30-40%",
+        "final_price": "Cost × 2.5 to 3"
+      }
+    },
+    {
+      "task_id": 7,
+      "name": "Marketing Automation",
+      "platform": "Pinterest + Facebook + Instagram",
+      "automation_tool": "n8n + Canva",
+      "description": "Promote products",
+      "frequency": "daily",
+      "steps": [
+        "Create pins for Pinterest (best for POD)",
+        "Post to Instagram with products",
+        "Share to Facebook groups",
+        "Run targeted ads",
+        "Build email list",
+        "Send promotional emails"
+      ]
+    },
+    {
+      "task_id": 8,
+      "name": "Order Fulfillment",
+      "platform": "Printful/Printify",
+      "automation_tool": "Fully automated",
+      "description": "Automatic order processing",
+      "frequency": "real-time",
+      "steps": [
+        "Customer orders from your store",
+        "POD platform receives order automatically",
+        "Product is printed and shipped",
+        "Customer receives tracking",
+        "You receive profit margin"
+      ],
+      "no_action_required": true
+    },
+    {
+      "task_id": 9,
+      "name": "Analytics & Scaling",
+      "platform": "Platform analytics + Notion",
+      "automation_tool": "n8n",
+      "description": "Track performance and scale",
+      "frequency": "weekly",
+      "steps": [
+        "Pull sales data from all platforms",
+        "Identify best-selling designs",
+        "Calculate ROI on ads",
+        "Create more variations of winners",
+        "Expand to new products",
+        "Test new niches"
+      ]
+    },
+    {
+      "task_id": 10,
+      "name": "Design Scaling",
+      "platform": "Outsourcing platforms",
+      "description": "Scale design production",
+      "frequency": "as needed",
+      "steps": [
+        "Hire designers on Fiverr/Upwork",
+        "Provide design briefs",
+        "Review and approve designs",
+        "Upload to POD platforms",
+        "Test in marketplace"
+      ]
+    }
+  ],
+  "startup_costs": {
+    "design_tools": "$13-30/month (Canva Pro)",
+    "etsy_listing_fees": "$0.20 per listing",
+    "shopify": "$29/month (optional)",
+    "advertising": "$100-500/month",
+    "total": "$150-600/month"
+  },
+  "estimated_monthly_revenue": {
+    "beginner": "$100-500 (Month 1-3)",
+    "intermediate": "$500-2,000 (Month 4-6)",
+    "advanced": "$2,000-10,000+ (Month 7-12)"
+  },
+  "profit_margins": "30-40% after all costs"
+}

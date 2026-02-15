@@ -1,0 +1,140 @@
+{
+  "workflow_name": "Blogging Automation for Income",
+  "description": "Automated blogging system for generating income through ads, sponsorships, and digital products",
+  "platforms": ["WordPress", "Medium", "Substack", "ChatGPT", "Canva", "Google AdSense", "n8n", "Notion"],
+  "revenue_streams": [
+    "Google AdSense",
+    "Sponsored posts",
+    "Digital products",
+    "Email courses",
+    "Consulting services"
+  ],
+  "tasks": [
+    {
+      "task_id": 1,
+      "name": "Content Planning",
+      "platform": "ChatGPT + Notion",
+      "automation_tool": "n8n",
+      "description": "Plan blog content calendar",
+      "frequency": "weekly",
+      "steps": [
+        "Research trending topics with ChatGPT",
+        "Analyze competitor content",
+        "Identify content gaps",
+        "Create 30-day content calendar",
+        "Store in Notion database"
+      ]
+    },
+    {
+      "task_id": 2,
+      "name": "Blog Post Creation",
+      "platform": "ChatGPT + WordPress",
+      "automation_tool": "n8n",
+      "description": "Generate and publish SEO-optimized blog posts",
+      "frequency": "daily",
+      "steps": [
+        "Generate 2000+ word articles with ChatGPT",
+        "Optimize for SEO keywords",
+        "Add internal/external links",
+        "Create featured images with Canva",
+        "Schedule posts via WordPress API",
+        "Auto-publish at optimal times"
+      ],
+      "output": "blog_posts/"
+    },
+    {
+      "task_id": 3,
+      "name": "SEO Optimization",
+      "platform": "Google Search Console",
+      "automation_tool": "n8n",
+      "description": "Optimize content for search engines",
+      "frequency": "daily",
+      "steps": [
+        "Research long-tail keywords",
+        "Optimize meta descriptions",
+        "Add schema markup",
+        "Build internal links",
+        "Update old posts",
+        "Monitor search rankings"
+      ]
+    },
+    {
+      "task_id": 4,
+      "name": "Social Media Promotion",
+      "platform": "Multiple social platforms",
+      "automation_tool": "n8n + Buffer",
+      "description": "Share content across social media",
+      "frequency": "daily",
+      "steps": [
+        "Create social media snippets",
+        "Design quote graphics with Canva",
+        "Schedule across platforms",
+        "Engage with comments",
+        "Repurpose top content"
+      ]
+    },
+    {
+      "task_id": 5,
+      "name": "Email Newsletter",
+      "platform": "ConvertKit/Mailchimp",
+      "automation_tool": "n8n",
+      "description": "Send weekly newsletter to subscribers",
+      "frequency": "weekly",
+      "steps": [
+        "Curate best content from week",
+        "Write newsletter with ChatGPT",
+        "Design email template",
+        "Segment audience",
+        "Schedule and send",
+        "Track engagement metrics"
+      ]
+    },
+    {
+      "task_id": 6,
+      "name": "Monetization Setup",
+      "platform": "Google AdSense + Mediavine",
+      "automation_tool": "Manual setup",
+      "description": "Set up ad networks and monetization",
+      "frequency": "one-time + monitoring",
+      "steps": [
+        "Apply to Google AdSense",
+        "Reach 50k sessions for Mediavine",
+        "Optimize ad placements",
+        "Monitor revenue metrics",
+        "A/B test ad positions"
+      ]
+    },
+    {
+      "task_id": 7,
+      "name": "Sponsored Content",
+      "platform": "Email + Notion",
+      "automation_tool": "n8n",
+      "description": "Manage sponsored post opportunities",
+      "frequency": "ongoing",
+      "steps": [
+        "Create media kit",
+        "Reach out to brands",
+        "Negotiate rates",
+        "Create sponsored content",
+        "Track in Notion database"
+      ]
+    },
+    {
+      "task_id": 8,
+      "name": "Analytics & Reporting",
+      "platform": "Google Analytics + Notion",
+      "automation_tool": "n8n",
+      "description": "Track blog performance",
+      "frequency": "weekly",
+      "steps": [
+        "Pull Google Analytics data",
+        "Calculate growth metrics",
+        "Identify top content",
+        "Generate visual reports",
+        "Adjust content strategy"
+      ]
+    }
+  ],
+  "estimated_monthly_revenue": "$1,000 - $5,000+",
+  "initial_investment": "$100 - $300"
+}

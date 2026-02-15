@@ -1,0 +1,250 @@
+{
+  "workflow_name": "Affiliate Marketing Automation",
+  "description": "Automated affiliate marketing system for generating passive income through content and recommendations",
+  "platforms": ["Amazon Associates", "ClickBank", "ShareASale", "YouTube", "WordPress", "ChatGPT", "Canva", "n8n", "Notion"],
+  "tasks": [
+    {
+      "task_id": 1,
+      "name": "Niche Research",
+      "platform": "ChatGPT",
+      "automation_tool": "n8n",
+      "description": "Identify profitable affiliate niches",
+      "frequency": "weekly",
+      "steps": [
+        "Use ChatGPT to research trending affiliate niches",
+        "Analyze commission rates across programs",
+        "Evaluate competition levels",
+        "Select 3-5 niches with high potential",
+        "Document findings in Notion"
+      ],
+      "output": "niche_research.json"
+    },
+    {
+      "task_id": 2,
+      "name": "Affiliate Program Registration",
+      "platform": "Multiple",
+      "automation_tool": "Manual + Notion tracking",
+      "description": "Sign up for relevant affiliate programs",
+      "frequency": "as_needed",
+      "steps": [
+        "Apply to Amazon Associates",
+        "Join ClickBank for digital products",
+        "Register with ShareASale",
+        "Apply to niche-specific programs",
+        "Store affiliate links in Notion database"
+      ],
+      "output": "affiliate_programs.json"
+    },
+    {
+      "task_id": 3,
+      "name": "Product Selection",
+      "platform": "Amazon + ClickBank",
+      "automation_tool": "n8n + ChatGPT",
+      "description": "Select high-converting products to promote",
+      "frequency": "daily",
+      "steps": [
+        "Use ChatGPT to analyze product reviews",
+        "Check gravity scores on ClickBank",
+        "Evaluate commission percentages",
+        "Select 5-10 products daily",
+        "Generate unique affiliate links"
+      ],
+      "output": "selected_products.json"
+    },
+    {
+      "task_id": 4,
+      "name": "Blog Content Creation",
+      "platform": "WordPress + ChatGPT",
+      "automation_tool": "n8n",
+      "description": "Create SEO-optimized blog posts with affiliate links",
+      "frequency": "daily",
+      "steps": [
+        "Generate blog topics with ChatGPT",
+        "Create 2000+ word product reviews",
+        "Include comparison tables",
+        "Add affiliate links naturally",
+        "Optimize for SEO keywords",
+        "Schedule WordPress posts via API"
+      ],
+      "output": "blog_posts/"
+    },
+    {
+      "task_id": 5,
+      "name": "YouTube Content Creation",
+      "platform": "YouTube + ChatGPT + Canva",
+      "automation_tool": "n8n",
+      "description": "Create affiliate product review videos",
+      "frequency": "3x per week",
+      "steps": [
+        "Generate video scripts with ChatGPT",
+        "Create thumbnails in Canva",
+        "Add affiliate links to video description",
+        "Include timestamps for products",
+        "Upload and optimize for SEO"
+      ],
+      "output": "youtube_videos/"
+    },
+    {
+      "task_id": 6,
+      "name": "Email List Building",
+      "platform": "ConvertKit/Mailchimp",
+      "automation_tool": "n8n",
+      "description": "Build email list for affiliate promotions",
+      "frequency": "ongoing",
+      "steps": [
+        "Create lead magnets with ChatGPT",
+        "Design opt-in forms in Canva",
+        "Set up email sequences",
+        "Segment subscribers by interest",
+        "Send weekly product recommendations"
+      ],
+      "output": "email_campaigns/"
+    },
+    {
+      "task_id": 7,
+      "name": "Social Media Promotion",
+      "platform": "Instagram + Pinterest + TikTok",
+      "automation_tool": "n8n + ChatGPT",
+      "description": "Share affiliate content on social platforms",
+      "frequency": "daily",
+      "steps": [
+        "Create social media posts with ChatGPT",
+        "Design graphics in Canva",
+        "Use link shorteners for tracking",
+        "Schedule posts across platforms",
+        "Engage with followers"
+      ],
+      "output": "social_posts.json"
+    },
+    {
+      "task_id": 8,
+      "name": "Landing Page Creation",
+      "platform": "WordPress + Elementor",
+      "automation_tool": "n8n + ChatGPT",
+      "description": "Create high-converting landing pages",
+      "frequency": "weekly",
+      "steps": [
+        "Design landing page layouts",
+        "Write persuasive copy with ChatGPT",
+        "Add comparison tables and charts",
+        "Implement call-to-action buttons",
+        "A/B test different versions"
+      ],
+      "output": "landing_pages/"
+    },
+    {
+      "task_id": 9,
+      "name": "SEO Optimization",
+      "platform": "Google Search Console + ChatGPT",
+      "automation_tool": "n8n",
+      "description": "Optimize content for search engines",
+      "frequency": "weekly",
+      "steps": [
+        "Research keywords with high intent",
+        "Optimize existing content",
+        "Build backlinks to affiliate content",
+        "Monitor search rankings",
+        "Update old posts with new products"
+      ],
+      "output": "seo_reports.json"
+    },
+    {
+      "task_id": 10,
+      "name": "Performance Analytics",
+      "platform": "Notion + Google Analytics",
+      "automation_tool": "n8n",
+      "description": "Track clicks, conversions, and revenue",
+      "frequency": "daily",
+      "steps": [
+        "Pull data from affiliate networks",
+        "Track click-through rates",
+        "Calculate conversion rates",
+        "Monitor commission earnings",
+        "Generate performance reports in Notion",
+        "Identify top-performing content"
+      ],
+      "output": "analytics_dashboard.json"
+    },
+    {
+      "task_id": 11,
+      "name": "Content Repurposing",
+      "platform": "Multi-platform",
+      "automation_tool": "n8n + ChatGPT",
+      "description": "Repurpose content across platforms",
+      "frequency": "weekly",
+      "steps": [
+        "Convert blog posts to YouTube scripts",
+        "Create Instagram carousels from articles",
+        "Turn videos into blog posts",
+        "Extract quotes for social media",
+        "Create Pinterest pins from content"
+      ],
+      "output": "repurposed_content/"
+    },
+    {
+      "task_id": 12,
+      "name": "Affiliate Link Management",
+      "platform": "ThirstyAffiliates/Pretty Links",
+      "automation_tool": "WordPress Plugin",
+      "description": "Manage and cloak affiliate links",
+      "frequency": "ongoing",
+      "steps": [
+        "Create short, branded links",
+        "Track link clicks and conversions",
+        "Update broken affiliate links",
+        "Organize links by category",
+        "Monitor link performance"
+      ],
+      "output": "link_database.json"
+    }
+  ],
+  "n8n_workflow_triggers": [
+    {
+      "trigger": "Schedule - Daily 8 AM",
+      "action": "Generate Blog Content"
+    },
+    {
+      "trigger": "Schedule - Monday/Wednesday/Friday 10 AM",
+      "action": "Create YouTube Video Script"
+    },
+    {
+      "trigger": "Schedule - Daily 6 PM",
+      "action": "Social Media Posts"
+    },
+    {
+      "trigger": "Schedule - Weekly Sunday 9 AM",
+      "action": "Analytics Report"
+    }
+  ],
+  "required_apis": [
+    "OpenAI API (ChatGPT)",
+    "WordPress API",
+    "YouTube Data API",
+    "Amazon Product API",
+    "Google Analytics API",
+    "Canva API",
+    "Email Service API",
+    "Social Media APIs"
+  ],
+  "revenue_streams": [
+    {
+      "source": "Blog affiliate clicks",
+      "estimated_monthly": "$500-2,000"
+    },
+    {
+      "source": "YouTube video links",
+      "estimated_monthly": "$300-1,500"
+    },
+    {
+      "source": "Email promotions",
+      "estimated_monthly": "$200-1,000"
+    },
+    {
+      "source": "Social media links",
+      "estimated_monthly": "$100-500"
+    }
+  ],
+  "estimated_setup_time": "1-2 weeks",
+  "estimated_monthly_revenue": "$1,000 - $5,000+",
+  "initial_investment": "$200 - $500"
+}

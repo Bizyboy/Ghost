@@ -1,0 +1,126 @@
+{
+  "workflow_name": "Marketing Automation",
+  "description": "Comprehensive marketing automation across email, social media, content, and SEO",
+  "platforms": ["Mailchimp", "HubSpot", "Hootsuite", "Buffer", "ChatGPT", "Canva", "n8n", "Google Analytics"],
+  "marketing_channels": [
+    "Email marketing",
+    "Social media marketing",
+    "Content marketing",
+    "SEO",
+    "Influencer marketing",
+    "Community building"
+  ],
+  "tasks": [
+    {
+      "task_id": 1,
+      "name": "Email Marketing Automation",
+      "platform": "Mailchimp/ConvertKit",
+      "automation_tool": "n8n",
+      "frequency": "ongoing",
+      "campaigns": [
+        {
+          "name": "Welcome Series",
+          "emails": 5,
+          "duration": "7 days",
+          "goal": "Introduce brand and build trust"
+        },
+        {
+          "name": "Nurture Sequence",
+          "emails": 10,
+          "duration": "30 days",
+          "goal": "Educate and move to purchase"
+        },
+        {
+          "name": "Sales Campaign",
+          "emails": 3,
+          "duration": "5 days",
+          "goal": "Drive conversions with urgency"
+        },
+        {
+          "name": "Re-engagement",
+          "emails": 3,
+          "duration": "10 days",
+          "goal": "Win back inactive subscribers"
+        }
+      ]
+    },
+    {
+      "task_id": 2,
+      "name": "Social Media Management",
+      "platform": "Multiple platforms",
+      "automation_tool": "Buffer/Hootsuite + n8n",
+      "frequency": "daily",
+      "steps": [
+        "Generate content calendar with ChatGPT",
+        "Create graphics in Canva",
+        "Schedule posts across platforms",
+        "Monitor engagement",
+        "Respond to comments/DMs",
+        "Track performance metrics"
+      ],
+      "platforms": ["Instagram", "Facebook", "Twitter", "LinkedIn", "TikTok", "Pinterest"]
+    },
+    {
+      "task_id": 3,
+      "name": "Content Marketing",
+      "platform": "WordPress + Medium + LinkedIn",
+      "automation_tool": "n8n + ChatGPT",
+      "frequency": "daily",
+      "content_types": [
+        "Blog posts",
+        "LinkedIn articles",
+        "Medium stories",
+        "Guest posts",
+        "Case studies",
+        "White papers"
+      ]
+    },
+    {
+      "task_id": 4,
+      "name": "SEO Optimization",
+      "platform": "Google Search Console",
+      "automation_tool": "n8n",
+      "frequency": "weekly",
+      "activities": [
+        "Keyword research",
+        "On-page optimization",
+        "Content updates",
+        "Backlink building",
+        "Technical SEO",
+        "Rank tracking"
+      ]
+    },
+    {
+      "task_id": 5,
+      "name": "Lead Magnet Creation",
+      "platform": "ChatGPT + Canva",
+      "automation_tool": "n8n",
+      "frequency": "monthly",
+      "lead_magnets": [
+        "Free ebooks",
+        "Checklists",
+        "Templates",
+        "Video courses",
+        "Webinars",
+        "Free trials"
+      ]
+    },
+    {
+      "task_id": 6,
+      "name": "Analytics & Reporting",
+      "platform": "Google Analytics + Notion",
+      "automation_tool": "n8n",
+      "frequency": "weekly",
+      "metrics": [
+        "Website traffic",
+        "Email open/click rates",
+        "Social media engagement",
+        "Conversion rates",
+        "Lead generation",
+        "ROI calculations"
+      ]
+    }
+  ],
+  "estimated_monthly_revenue": "$2,000 - $10,000+",
+  "initial_investment": "$200 - $1,000"
+}

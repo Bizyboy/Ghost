@@ -1,0 +1,160 @@
+{
+  "workflow_name": "E-commerce Automation",
+  "description": "Automated e-commerce business using Shopify, WooCommerce, and Amazon",
+  "platforms": ["Shopify", "WooCommerce", "Amazon", "Etsy", "eBay", "ChatGPT", "Canva", "n8n"],
+  "business_models": [
+    "Private label products",
+    "Wholesale",
+    "Retail arbitrage",
+    "Online arbitrage",
+    "Brand building"
+  ],
+  "tasks": [
+    {
+      "task_id": 1,
+      "name": "Product Research",
+      "platform": "Jungle Scout + ChatGPT",
+      "description": "Find profitable products to sell",
+      "steps": [
+        "Use Jungle Scout for Amazon product research",
+        "Analyze sales volume and competition",
+        "Check profit margins (aim for 30%+)",
+        "Validate demand with Google Trends",
+        "Use ChatGPT to analyze market opportunities"
+      ]
+    },
+    {
+      "task_id": 2,
+      "name": "Supplier Sourcing",
+      "platform": "Alibaba",
+      "description": "Find reliable manufacturers",
+      "steps": [
+        "Search Alibaba for products",
+        "Filter by Gold Supplier status",
+        "Request quotes from 5-10 suppliers",
+        "Order samples for quality check",
+        "Negotiate pricing and MOQ"
+      ]
+    },
+    {
+      "task_id": 3,
+      "name": "Brand Development",
+      "platform": "Canva + ChatGPT",
+      "description": "Create brand identity",
+      "steps": [
+        "Design logo in Canva",
+        "Create brand colors and fonts",
+        "Design packaging",
+        "Write brand story with ChatGPT",
+        "Register trademark"
+      ]
+    },
+    {
+      "task_id": 4,
+      "name": "Store Setup",
+      "platform": "Shopify/Amazon",
+      "description": "Launch online store",
+      "steps": [
+        "Set up Shopify store or Amazon Seller account",
+        "Design store theme",
+        "Add products with ChatGPT descriptions",
+        "Set up payment processing",
+        "Configure shipping options"
+      ]
+    },
+    {
+      "task_id": 5,
+      "name": "Product Listing Optimization",
+      "platform": "ChatGPT + Canva",
+      "automation_tool": "n8n",
+      "frequency": "per product",
+      "steps": [
+        "Generate SEO-optimized titles",
+        "Write compelling descriptions",
+        "Create bullet points for features",
+        "Design product images",
+        "Add A+ content (Amazon)",
+        "Set competitive pricing"
+      ]
+    },
+    {
+      "task_id": 6,
+      "name": "Inventory Management",
+      "platform": "Inventory management software",
+      "automation_tool": "n8n",
+      "frequency": "daily",
+      "steps": [
+        "Track stock levels",
+        "Reorder when low",
+        "Monitor sales velocity",
+        "Forecast demand",
+        "Update listings automatically"
+      ]
+    },
+    {
+      "task_id": 7,
+      "name": "Marketing & Advertising",
+      "platform": "Facebook Ads + Amazon PPC",
+      "automation_tool": "n8n",
+      "frequency": "ongoing",
+      "steps": [
+        "Run Facebook/Instagram ads to Shopify",
+        "Set up Amazon PPC campaigns",
+        "Create Google Shopping ads",
+        "Build email marketing list",
+        "Run influencer campaigns"
+      ]
+    },
+    {
+      "task_id": 8,
+      "name": "Customer Service Automation",
+      "platform": "Zendesk + ChatGPT",
+      "automation_tool": "n8n",
+      "frequency": "real-time",
+      "steps": [
+        "Auto-respond to common questions",
+        "Handle order inquiries",
+        "Process returns and refunds",
+        "Collect product reviews",
+        "Escalate complex issues"
+      ]
+    },
+    {
+      "task_id": 9,
+      "name": "Review Management",
+      "platform": "Amazon + Shopify",
+      "automation_tool": "n8n",
+      "frequency": "daily",
+      "steps": [
+        "Request reviews from customers",
+        "Monitor review sentiment",
+        "Respond to negative reviews",
+        "Showcase positive reviews",
+        "Track review metrics"
+      ]
+    },
+    {
+      "task_id": 10,
+      "name": "Analytics & Optimization",
+      "platform": "Shopify Analytics + Amazon",
+      "automation_tool": "n8n + Notion",
+      "frequency": "weekly",
+      "steps": [
+        "Track sales and revenue",
+        "Calculate profit margins",
+        "Monitor ad ROAS",
+        "Identify best sellers",
+        "Generate reports in Notion"
+      ]
+    }
+  ],
+  "estimated_startup_costs": {
+    "inventory": "$1,000 - $5,000",
+    "platform_fees": "$50 - $100/month",
+    "advertising": "$500 - $2,000/month",
+    "tools": "$100 - $300/month",
+    "total": "$1,650 - $7,400 to start"
+  },
+  "estimated_monthly_revenue": "$5,000 - $50,000+",
+  "target_profit_margin": "30-40%"
+}
