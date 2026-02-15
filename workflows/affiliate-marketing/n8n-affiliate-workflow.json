@@ -1,0 +1,205 @@
+{
+  "name": "Affiliate Marketing Automation - n8n Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{"field": "hours", "hoursInterval": 24}]
+        }
+      },
+      "name": "Daily Content Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.openai.com/v1/chat/completions",
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "jsonParameters": true,
+        "bodyParametersJson": "={\"model\": \"gpt-4\", \"messages\": [{\"role\": \"user\", \"content\": \"Write a comprehensive 2000-word product review blog post about [PRODUCT]. Include pros, cons, features, pricing, and who it's best for. Make it SEO-optimized.\"}]}"
+      },
+      "name": "Generate Blog Post",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.openai.com/v1/chat/completions",
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "jsonParameters": true,
+        "bodyParametersJson": "={\"model\": \"gpt-4\", \"messages\": [{\"role\": \"user\", \"content\": \"Generate 5 SEO-optimized title options for this blog post about [PRODUCT]\"}]}"
+      },
+      "name": "Generate SEO Titles",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "const content = $input.item.json.choices[0].message.content;\nconst affiliateLink = 'https://amazon.com/dp/XXXXX?tag=youraffid';\nconst modifiedContent = content + '\\n\\n[Buy on Amazon](' + affiliateLink + ')';\nreturn [{json: {content: modifiedContent}}];"
+      },
+      "name": "Add Affiliate Links",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [850, 300]
+    },
+    {
+      "parameters": {
+        "resource": "post",
+        "operation": "create",
+        "title": "={{$json.title}}",
+        "content": "={{$json.content}}",
+        "status": "publish"
+      },
+      "name": "Publish to WordPress",
+      "type": "n8n-nodes-base.wordpress",
+      "typeVersion": 1,
+      "position": [1050, 300]
+    },
+    {
+      "parameters": {
+        "databaseId": "your-notion-database-id",
+        "title": "={{$json.title}}",
+        "properties": {
+          "Status": "Published",
+          "Date": "={{$now}}",
+          "Platform": "Blog",
+          "Type": "Product Review"
+        }
+      },
+      "name": "Log to Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 1,
+      "position": [1250, 300]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{"field": "cronExpression", "cronExpression": "0 10 * * 1,3,5"}]
+        }
+      },
+      "name": "YouTube Schedule (Mon/Wed/Fri)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 500]
+    },
+    {
+      "parameters": {
+        "url": "https://api.openai.com/v1/chat/completions",
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "jsonParameters": true,
+        "bodyParametersJson": "={\"model\": \"gpt-4\", \"messages\": [{\"role\": \"user\", \"content\": \"Create a 10-minute YouTube video script reviewing [PRODUCT]. Include: intro, features breakdown, pros/cons, price comparison, conclusion with affiliate link mention.\"}]}"
+      },
+      "name": "Generate YouTube Script",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [450, 500]
+    },
+    {
+      "parameters": {
+        "functionCode": "const script = $input.item.json.choices[0].message.content;\nconst description = 'Get [PRODUCT]: https://amazon.com/dp/XXXXX?tag=youraffid\\n\\nTimestamps:\\n0:00 Intro\\n1:00 Features\\n5:00 Pros & Cons\\n8:00 Verdict';\nreturn [{json: {script: script, description: description}}];"
+      },
+      "name": "Format Video Description",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [650, 500]
+    },
+    {
+      "parameters": {
+        "databaseId": "your-notion-database-id",
+        "title": "YouTube Video - [PRODUCT]",
+        "properties": {
+          "Script": "={{$json.script}}",
+          "Description": "={{$json.description}}",
+          "Status": "Ready to Record"
+        }
+      },
+      "name": "Save to Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 1,
+      "position": [850, 500]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{"field": "hours", "hoursInterval": 168}]
+        }
+      },
+      "name": "Weekly Analytics",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 700]
+    },
+    {
+      "parameters": {
+        "url": "https://api.amazon.com/affiliate/report",
+        "authentication": "headerAuth"
+      },
+      "name": "Get Amazon Stats",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [450, 700]
+    },
+    {
+      "parameters": {
+        "functionCode": "const clicks = $json.clicks;\nconst conversions = $json.conversions;\nconst revenue = $json.revenue;\nconst conversionRate = (conversions / clicks * 100).toFixed(2);\nreturn [{json: {clicks, conversions, revenue, conversionRate}}];"
+      },
+      "name": "Calculate Metrics",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [650, 700]
+    },
+    {
+      "parameters": {
+        "fromEmail": "analytics@yourdomain.com",
+        "toEmail": "you@email.com",
+        "subject": "Weekly Affiliate Report",
+        "text": "Clicks: {{$json.clicks}}\\nConversions: {{$json.conversions}}\\nRevenue: ${{$json.revenue}}\\nConversion Rate: {{$json.conversionRate}}%"
+      },
+      "name": "Email Report",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [850, 700]
+    }
+  ],
+  "connections": {
+    "Daily Content Trigger": {
+      "main": [[{"node": "Generate Blog Post", "type": "main", "index": 0}]]
+    },
+    "Generate Blog Post": {
+      "main": [[{"node": "Generate SEO Titles", "type": "main", "index": 0}]]
+    },
+    "Generate SEO Titles": {
+      "main": [[{"node": "Add Affiliate Links", "type": "main", "index": 0}]]
+    },
+    "Add Affiliate Links": {
+      "main": [[{"node": "Publish to WordPress", "type": "main", "index": 0}]]
+    },
+    "Publish to WordPress": {
+      "main": [[{"node": "Log to Notion", "type": "main", "index": 0}]]
+    },
+    "YouTube Schedule (Mon/Wed/Fri)": {
+      "main": [[{"node": "Generate YouTube Script", "type": "main", "index": 0}]]
+    },
+    "Generate YouTube Script": {
+      "main": [[{"node": "Format Video Description", "type": "main", "index": 0}]]
+    },
+    "Format Video Description": {
+      "main": [[{"node": "Save to Notion", "type": "main", "index": 0}]]
+    },
+    "Weekly Analytics": {
+      "main": [[{"node": "Get Amazon Stats", "type": "main", "index": 0}]]
+    },
+    "Get Amazon Stats": {
+      "main": [[{"node": "Calculate Metrics", "type": "main", "index": 0}]]
+    },
+    "Calculate Metrics": {
+      "main": [[{"node": "Email Report", "type": "main", "index": 0}]]
+    }
+  }
+}

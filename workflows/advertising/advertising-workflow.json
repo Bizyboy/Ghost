@@ -1,0 +1,145 @@
+{
+  "workflow_name": "Digital Advertising Automation",
+  "description": "Automated advertising campaigns across Google, Facebook, Instagram, TikTok, and YouTube",
+  "platforms": ["Google Ads", "Facebook Ads", "Instagram Ads", "TikTok Ads", "YouTube Ads", "ChatGPT", "Canva", "n8n"],
+  "tasks": [
+    {
+      "task_id": 1,
+      "name": "Ad Campaign Planning",
+      "platform": "ChatGPT + Notion",
+      "automation_tool": "n8n",
+      "description": "Plan advertising campaigns",
+      "frequency": "weekly",
+      "steps": [
+        "Define campaign objectives",
+        "Research target audience",
+        "Set budget and timeline",
+        "Choose platforms",
+        "Create campaign structure"
+      ]
+    },
+    {
+      "task_id": 2,
+      "name": "Ad Copy Creation",
+      "platform": "ChatGPT",
+      "automation_tool": "n8n",
+      "description": "Generate ad copy variations",
+      "frequency": "daily",
+      "steps": [
+        "Use ChatGPT for headlines (5-10 variations)",
+        "Generate primary text options",
+        "Create call-to-action variations",
+        "Adapt copy for each platform",
+        "A/B test different angles"
+      ],
+      "output": "ad_copy.json"
+    },
+    {
+      "task_id": 3,
+      "name": "Ad Creative Design",
+      "platform": "Canva",
+      "automation_tool": "Semi-automated",
+      "description": "Design ad visuals",
+      "frequency": "daily",
+      "steps": [
+        "Create images in multiple sizes",
+        "Design video ads",
+        "Use brand colors and fonts",
+        "Test different visual styles",
+        "Export for all platforms"
+      ],
+      "output": "ad_creatives/"
+    },
+    {
+      "task_id": 4,
+      "name": "Campaign Setup",
+      "platform": "Multiple ad platforms",
+      "automation_tool": "Platform APIs + n8n",
+      "description": "Launch ad campaigns",
+      "frequency": "weekly",
+      "steps": [
+        "Create campaigns via APIs",
+        "Set up ad sets/ad groups",
+        "Configure targeting",
+        "Set budgets and bids",
+        "Upload creatives",
+        "Enable tracking pixels"
+      ],
+      "output": "campaign_ids.json"
+    },
+    {
+      "task_id": 5,
+      "name": "Performance Monitoring",
+      "platform": "All platforms + Google Analytics",
+      "automation_tool": "n8n",
+      "description": "Track ad performance",
+      "frequency": "daily",
+      "steps": [
+        "Pull performance metrics via APIs",
+        "Calculate ROAS and CPA",
+        "Identify winning ads",
+        "Flag underperformers",
+        "Generate reports in Notion"
+      ],
+      "output": "performance_reports/"
+    },
+    {
+      "task_id": 6,
+      "name": "Campaign Optimization",
+      "platform": "All platforms",
+      "automation_tool": "n8n + manual review",
+      "description": "Optimize campaigns",
+      "frequency": "daily",
+      "steps": [
+        "Pause poor performers",
+        "Increase budget on winners",
+        "Adjust bids",
+        "Refine targeting",
+        "Test new creatives"
+      ]
+    },
+    {
+      "task_id": 7,
+      "name": "Retargeting Campaigns",
+      "platform": "Facebook Pixel + Google Ads",
+      "automation_tool": "n8n",
+      "description": "Retarget website visitors",
+      "frequency": "ongoing",
+      "steps": [
+        "Set up tracking pixels",
+        "Create custom audiences",
+        "Design retargeting ads",
+        "Set up sequential messaging",
+        "Track conversion paths"
+      ]
+    }
+  ],
+  "platform_specs": {
+    "google_ads": {
+      "best_for": "Search intent, high-intent keywords",
+      "avg_cpc": "$1-5",
+      "conversion_rate": "2-5%",
+      "recommended_budget": "$30-100/day"
+    },
+    "facebook_ads": {
+      "best_for": "Interest targeting, video ads",
+      "avg_cpc": "$0.50-2",
+      "conversion_rate": "1-3%",
+      "recommended_budget": "$20-100/day"
+    },
+    "instagram_ads": {
+      "best_for": "Visual products, younger audience",
+      "avg_cpc": "$0.50-1.50",
+      "conversion_rate": "1-2%",
+      "recommended_budget": "$15-75/day"
+    },
+    "tiktok_ads": {
+      "best_for": "Viral content, Gen Z audience",
+      "avg_cpc": "$0.50-1",
+      "conversion_rate": "2-4%",
+      "recommended_budget": "$20-100/day"
+    }
+  },
+  "estimated_monthly_spend": "$1,500 - $10,000",
+  "target_roas": "3x - 5x (300-500% return)"
+}

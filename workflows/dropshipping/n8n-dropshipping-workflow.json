@@ -1,0 +1,150 @@
+{
+  "name": "Dropshipping Automation - n8n Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.openai.com/v1/chat/completions",
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "jsonParameters": true,
+        "bodyParametersJson": "={\"model\": \"gpt-4\", \"messages\": [{\"role\": \"user\", \"content\": \"List 10 trending dropshipping products for 2024 with high profit potential. Include product name, niche, estimated cost, and selling price.\"}]}"
+      },
+      "name": "ChatGPT Product Research",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "const products = JSON.parse($input.item.json.choices[0].message.content);\nreturn products.map(product => ({json: product}));"
+      },
+      "name": "Parse Products",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.alibaba.com/search",
+        "qs": {
+          "keyword": "={{$json.product_name}}"
+        }
+      },
+      "name": "Search Alibaba Suppliers",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [850, 300]
+    },
+    {
+      "parameters": {
+        "resource": "product",
+        "operation": "create",
+        "title": "={{$json.product_name}}",
+        "productDescription": "={{$json.description}}",
+        "price": "={{$json.selling_price}}"
+      },
+      "name": "Create Shopify Product",
+      "type": "n8n-nodes-base.shopify",
+      "typeVersion": 1,
+      "position": [1050, 300]
+    },
+    {
+      "parameters": {
+        "databaseId": "your-notion-database-id",
+        "title": "={{$json.product_name}}",
+        "properties": {
+          "Status": "Listed",
+          "Cost": "={{$json.cost}}",
+          "Price": "={{$json.selling_price}}",
+          "Margin": "={{$json.profit_margin}}"
+        }
+      },
+      "name": "Log to Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 1,
+      "position": [1250, 300]
+    },
+    {
+      "parameters": {
+        "events": ["orders/create"]
+      },
+      "name": "Shopify Order Webhook",
+      "type": "n8n-nodes-base.shopifyTrigger",
+      "typeVersion": 1,
+      "position": [250, 500]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [{json: {\n  customer_name: $json.customer.name,\n  email: $json.customer.email,\n  order_items: $json.line_items,\n  total: $json.total_price\n}}];"
+      },
+      "name": "Extract Order Info",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [450, 500]
+    },
+    {
+      "parameters": {
+        "resource": "order",
+        "operation": "create"
+      },
+      "name": "Place Supplier Order",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [650, 500]
+    },
+    {
+      "parameters": {
+        "fromEmail": "orders@yourdropshippingstore.com",
+        "toEmail": "={{$json.email}}",
+        "subject": "Order Confirmation",
+        "text": "Thank you for your order! Your items are being processed."
+      },
+      "name": "Send Confirmation Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [850, 500]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [[{"node": "ChatGPT Product Research", "type": "main", "index": 0}]]
+    },
+    "ChatGPT Product Research": {
+      "main": [[{"node": "Parse Products", "type": "main", "index": 0}]]
+    },
+    "Parse Products": {
+      "main": [[{"node": "Search Alibaba Suppliers", "type": "main", "index": 0}]]
+    },
+    "Search Alibaba Suppliers": {
+      "main": [[{"node": "Create Shopify Product", "type": "main", "index": 0}]]
+    },
+    "Create Shopify Product": {
+      "main": [[{"node": "Log to Notion", "type": "main", "index": 0}]]
+    },
+    "Shopify Order Webhook": {
+      "main": [[{"node": "Extract Order Info", "type": "main", "index": 0}]]
+    },
+    "Extract Order Info": {
+      "main": [[{"node": "Place Supplier Order", "type": "main", "index": 0}]]
+    },
+    "Place Supplier Order": {
+      "main": [[{"node": "Send Confirmation Email", "type": "main", "index": 0}]]
+    }
+  }
+}
