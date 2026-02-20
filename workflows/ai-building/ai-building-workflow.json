@@ -1,7 +1,16 @@
 {
   "workflow_name": "AI Building & Tool Creation",
   "description": "Build and monetize AI-powered applications and tools",
-  "platforms": ["OpenAI", "Anthropic", "ChatGPT", "GitHub", "Replit", "Vercel", "Stripe", "n8n"],
+  "platforms": [
+    "OpenAI",
+    "Anthropic",
+    "ChatGPT",
+    "GitHub",
+    "Replit",
+    "Vercel",
+    "Stripe",
+    "n8n"
+  ],
   "revenue_streams": [
     "SaaS subscriptions",
     "API access fees",
@@ -12,35 +21,56 @@
     {
       "tool_name": "AI Content Generator",
       "description": "Generate blog posts, social media content, and marketing copy",
-      "tech_stack": ["OpenAI API", "React", "Node.js", "MongoDB"],
+      "tech_stack": [
+        "OpenAI API",
+        "React",
+        "Node.js",
+        "MongoDB"
+      ],
       "monetization": "Freemium model - $19-99/month",
       "estimated_revenue": "$500-5,000/month"
     },
     {
       "tool_name": "AI Image Generator",
       "description": "Create images from text descriptions",
-      "tech_stack": ["DALL-E API", "Stable Diffusion", "Next.js"],
+      "tech_stack": [
+        "DALL-E API",
+        "Stable Diffusion",
+        "Next.js"
+      ],
       "monetization": "Credits system - $0.50-2 per image",
       "estimated_revenue": "$300-3,000/month"
     },
     {
       "tool_name": "AI Chatbot Builder",
       "description": "Create custom chatbots for businesses",
-      "tech_stack": ["GPT-4 API", "Vector Database", "React"],
+      "tech_stack": [
+        "GPT-4 API",
+        "Vector Database",
+        "React"
+      ],
       "monetization": "Setup fee + monthly subscription",
       "estimated_revenue": "$1,000-10,000/month"
     },
     {
       "tool_name": "AI SEO Optimizer",
       "description": "Optimize content for search engines",
-      "tech_stack": ["GPT-4", "Python", "FastAPI"],
+      "tech_stack": [
+        "GPT-4",
+        "Python",
+        "FastAPI"
+      ],
       "monetization": "Subscription $29-199/month",
       "estimated_revenue": "$500-5,000/month"
     },
     {
       "tool_name": "AI Email Assistant",
       "description": "Automate email responses and campaigns",
-      "tech_stack": ["OpenAI", "Email APIs", "n8n"],
+      "tech_stack": [
+        "OpenAI",
+        "Email APIs",
+        "n8n"
+      ],
       "monetization": "Per-user pricing $10-50/month",
       "estimated_revenue": "$300-3,000/month"
     }
@@ -56,6 +86,11 @@
         "Survey potential users",
         "Validate demand",
         "Choose MVP features"
+      ],
+      "chatgpt_prompts": [
+        "You are a serial SaaS entrepreneur and AI product strategist. Help me validate an AI tool idea: [DESCRIBE_IDEA]. Analyze: (1) Market size and TAM estimate, (2) Target customer persona (be specific - job title, company size, budget authority), (3) Top 5 competitors and their weaknesses, (4) My unique differentiation angle, (5) Willingness to pay assessment - what pricing model and price point makes sense, (6) Distribution channels to reach customers, (7) Key risks and mitigation strategies, (8) 3 red flags that would kill this idea, (9) MVP feature set (minimum viable to get first paying customer), (10) Success metrics for validation phase. Give me a go/no-go recommendation with clear reasoning.",
+        "Generate 20 specific AI tool ideas for the [INDUSTRY/NICHE] market that could be built as a one-person SaaS business. For each idea: (1) Tool name and one-line description, (2) Specific pain point it solves, (3) Target customer and their current workaround, (4) Revenue model and price point, (5) Technical complexity (1-5 scale), (6) Time to MVP estimate, (7) Monthly revenue potential at scale. Focus on tools that: use GPT-4 or Claude API as the core, solve a repetitive business task, and have a clear ROI for customers. Rank them by opportunity score (market size \u00d7 monetization potential \u00f7 competition).",
+        "Create a customer discovery interview guide for validating my AI tool idea: [TOOL_IDEA]. Write 20 interview questions that will reveal: (1) The severity of the problem, (2) Current solutions they use and what they hate about them, (3) Budget and decision-making process, (4) Success metrics they care about, (5) Features they'd need on day 1. Also write 5 one-sentence cold outreach messages to get 30-minute calls with [TARGET_JOB_TITLE] professionals. Include how to analyze the interviews to make a build/no-build decision."
       ]
     },
     {
@@ -68,6 +103,10 @@
         "Build core functionality",
         "Create simple UI",
         "Deploy to Vercel/Netlify"
+      ],
+      "chatgpt_prompts": [
+        "You are a senior full-stack developer and AI integration expert. Help me design the technical architecture for [AI_TOOL_NAME], which [DESCRIBE_FUNCTIONALITY]. Provide: (1) Complete tech stack recommendation with justification (frontend, backend, database, AI integration), (2) System architecture diagram description, (3) Database schema for core entities, (4) API endpoints list with request/response formats, (5) OpenAI/Claude API integration approach with optimal prompting strategy, (6) Authentication and user management approach, (7) Scalability considerations, (8) Estimated AWS/Vercel hosting costs at 100/1,000/10,000 users, (9) Development timeline breakdown (Phase 1 MVP, Phase 2 enhancements), (10) Security best practices for handling user data and API keys.",
+        "Write the core AI prompt system for [AI_TOOL_NAME] that [DESCRIBE_WHAT_IT_DOES]. Create: (1) System prompt (500+ words) that defines the AI's role, capabilities, tone, and constraints, (2) 5 example user prompts and ideal AI responses showing the system working correctly, (3) Edge case handling instructions for when users give ambiguous or inappropriate inputs, (4) Output format specification (JSON structure or markdown format), (5) Techniques to ensure consistent, high-quality outputs, (6) Cost optimization strategy (how to minimize tokens while maintaining quality), (7) Fallback handling if the AI response is low quality. This prompt system should be production-ready."
       ]
     },
     {
@@ -92,6 +131,10 @@
         "Post on Twitter/LinkedIn",
         "Reach out to early adopters",
         "Collect feedback"
+      ],
+      "chatgpt_prompts": [
+        "Create a complete Product Hunt launch strategy for [AI_TOOL_NAME] - [ONE_LINE_DESCRIPTION]. Provide: (1) Product Hunt listing copy (tagline under 60 chars, description 260 chars, full description 800 chars), (2) Launch day timeline (hour-by-hour plan), (3) Pre-launch community building plan (30 days before), (4) Hunter outreach message template, (5) First comment to post immediately at launch, (6) Follow-up comments to engage with voters, (7) Social media announcement posts for Twitter, LinkedIn, and Facebook, (8) Email to existing users/waitlist asking for support, (9) Press release template for tech blogs, (10) Goals and what constitutes a successful launch. Also write 5 posts to publish on relevant subreddits without being spammy.",
+        "Write all marketing copy for [AI_TOOL_NAME] SaaS landing page targeting [TARGET_CUSTOMER]. Include: (1) Hero headline (conveys the transformation in under 10 words), (2) Subheadline (explains who it's for and the key benefit), (3) Social proof bar (write 5 realistic stats like '10,000+ [ACTION] created'), (4) Features section (6 features with benefit-focused headers and 2-sentence descriptions), (5) How it works (3-step process with titles and descriptions), (6) Testimonials (write 5 detailed, specific testimonials from different personas), (7) Pricing section copy for 3 tiers (name, tagline, and bullet points), (8) FAQ (10 questions addressing objections), (9) Final CTA section with urgency element. Write in a tone that's [professional/conversational/bold]."
       ]
     },
     {
@@ -104,6 +147,10 @@
         "Create support chatbot",
         "Monitor usage and costs",
         "Scale infrastructure"
+      ],
+      "chatgpt_prompts": [
+        "Design a complete customer onboarding automation system for [AI_TOOL_NAME] SaaS. The system should maximize activation rate (users who get value in their first session). Create: (1) Welcome email sequence (5 emails over 14 days - write full copy), (2) In-app onboarding checklist (8 steps with micro-copy), (3) Day 3 check-in email for users who haven't activated, (4) Day 7 save email for users about to churn, (5) Success milestone emails triggered by key actions, (6) Support chatbot responses for top 10 questions (write all Q&A), (7) NPS survey email (Day 30), (8) Upgrade prompt sequence for free tier users. Include the n8n workflow logic for each automation trigger and action.",
+        "Create a customer success playbook for scaling [AI_TOOL_NAME] to $10,000 MRR. Include: (1) Customer support SOP (how to handle refund requests, bug reports, feature requests), (2) 30/60/90 day expansion email sequence to upsell users to higher tiers, (3) Referral program structure and copy (email asking for referrals + referral landing page), (4) Partnership outreach email for integration partnerships with [LIST_TOOLS], (5) Monthly product update email template that retains subscribers, (6) Win-back campaign for churned users (3-email sequence), (7) Affiliate program setup and recruitment strategy."
       ]
     }
   ],

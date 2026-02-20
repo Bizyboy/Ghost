@@ -1,46 +1,86 @@
 {
   "workflow_name": "Digital Products Automation",
   "description": "Create and sell digital products with near-100% profit margins",
-  "platforms": ["Gumroad", "Etsy", "Shopify", "Teachable", "Podia", "ChatGPT", "Canva", "n8n"],
+  "platforms": [
+    "Gumroad",
+    "Etsy",
+    "Shopify",
+    "Teachable",
+    "Podia",
+    "ChatGPT",
+    "Canva",
+    "n8n"
+  ],
   "product_types": [
     {
       "type": "Templates",
-      "examples": ["Notion templates", "Spreadsheet templates", "Resume templates", "Social media templates"],
+      "examples": [
+        "Notion templates",
+        "Spreadsheet templates",
+        "Resume templates",
+        "Social media templates"
+      ],
       "price_range": "$5-50",
       "creation_time": "2-8 hours",
       "profit_margin": "95%+"
     },
     {
       "type": "Digital Downloads",
-      "examples": ["Printable planners", "Wall art", "Checklists", "Worksheets"],
+      "examples": [
+        "Printable planners",
+        "Wall art",
+        "Checklists",
+        "Worksheets"
+      ],
       "price_range": "$3-30",
       "creation_time": "1-4 hours",
       "profit_margin": "95%+"
     },
     {
       "type": "E-books & Guides",
-      "examples": ["How-to guides", "Recipe books", "Workbooks", "Study guides"],
+      "examples": [
+        "How-to guides",
+        "Recipe books",
+        "Workbooks",
+        "Study guides"
+      ],
       "price_range": "$10-100",
       "creation_time": "10-40 hours",
       "profit_margin": "95%+"
     },
     {
       "type": "Online Courses",
-      "examples": ["Video courses", "Email courses", "Masterclasses", "Workshops"],
+      "examples": [
+        "Video courses",
+        "Email courses",
+        "Masterclasses",
+        "Workshops"
+      ],
       "price_range": "$50-500",
       "creation_time": "20-100 hours",
       "profit_margin": "90%+"
     },
     {
       "type": "Software & Tools",
-      "examples": ["Chrome extensions", "Notion widgets", "Spreadsheet calculators", "Automations"],
+      "examples": [
+        "Chrome extensions",
+        "Notion widgets",
+        "Spreadsheet calculators",
+        "Automations"
+      ],
       "price_range": "$10-200",
       "creation_time": "20-200 hours",
       "profit_margin": "95%+"
     },
     {
       "type": "Stock Assets",
-      "examples": ["Photos", "Videos", "Music", "Graphics", "Icons"],
+      "examples": [
+        "Photos",
+        "Videos",
+        "Music",
+        "Graphics",
+        "Icons"
+      ],
       "price_range": "$5-100 per pack",
       "creation_time": "Variable",
       "profit_margin": "95%+"
@@ -69,6 +109,10 @@
         "Fitness and health",
         "Education resources",
         "Social media content"
+      ],
+      "chatgpt_prompts": [
+        "You are an expert digital product creator and seller who has made millions from Gumroad, Etsy, and Teachable. Help me find the most profitable digital product opportunities in the [NICHE] space for [CURRENT_YEAR]. Analyze: (1) Top 20 bestselling digital products on Etsy in [CATEGORY] right now - describe the product type, price range, and why they sell, (2) Trending Gumroad products in [CATEGORY], (3) Underserved customer pain points that digital products could solve, (4) Price point sweet spots by product type, (5) Market saturation analysis, (6) Differentiation opportunities. Recommend my top 5 digital product ideas ranked by: creation time, potential earnings, competition level, and long-term demand. For the #1 recommendation, provide a complete go-to-market strategy.",
+        "Research the top digital product creators in [NICHE] on Twitter, Gumroad, and YouTube. Identify: (1) What types of products are they selling, (2) Their pricing strategies, (3) How they market and deliver value, (4) What their audiences complain about or ask for most (this reveals product opportunities), (5) What gaps exist in their product lines, (6) What problems their free content reveals but doesn't fully solve (those are product opportunities). Synthesize this into 10 specific digital product ideas with a unique angle that would stand out in the market. For each idea: write a potential product name, tagline, and 5-bullet description of what's included."
       ]
     },
     {
@@ -86,7 +130,12 @@
         "Record video courses",
         "Package and format deliverables"
       ],
-      "output": "digital_products/"
+      "output": "digital_products/",
+      "chatgpt_prompts": [
+        "You are an expert information product creator. Help me create a complete [PRODUCT_TYPE] on '[TOPIC]' for [TARGET_AUDIENCE]. Create: (1) Complete table of contents/outline with all sections and subsections, (2) Introduction that establishes credibility and excites the reader (300 words), (3) Core content for each major section (write 200-300 words per section, totaling 3,000+ words), (4) Actionable worksheets and exercises (create 5 fillable templates/worksheets), (5) Resource list and tools section, (6) Conclusion with implementation roadmap, (7) Bonus section ideas (3 bonuses to increase perceived value). Format should be clear, scannable, and professional. The product must deliver a transformation - the buyer should be able to implement the content and get a measurable result.",
+        "Create a complete Notion template product for [USE_CASE] targeting [TARGET_AUDIENCE]. Design: (1) Full database structure with all properties and views, (2) Template pages with clear instructions written in the template itself, (3) Sample data to show how it works, (4) Getting started guide (500 words), (5) Tutorial video script (write the script for a 10-minute walkthrough), (6) Customization guide showing how to adapt it for different use cases. Also write the Gumroad product listing: title, 300-word description, 5 bullet points, and pricing recommendation. This template should save the buyer 20+ hours of setup time and be worth $29-$97.",
+        "Design a complete mini email course (5-day) on '[TOPIC]' that I can sell for $[PRICE] or offer as a lead magnet. For each of the 5 days write: (1) Subject line (compelling, creates anticipation for the next lesson), (2) Email intro (personalized hook), (3) Core lesson content (400-600 words with the day's key insight, actionable tip, and mini exercise), (4) Homework assignment (simple, specific action to take today), (5) Preview of tomorrow's lesson (creates anticipation). Also write: the opt-in page copy (headline, 5 benefits, CTA), the product description for selling as a paid course, and an upsell offer to present after completion."
+      ]
     },
     {
       "task_id": 3,
@@ -131,6 +180,10 @@
         "Set pricing based on value",
         "Add relevant tags/categories",
         "Publish to multiple platforms"
+      ],
+      "chatgpt_prompts": [
+        "You are a conversion copywriter specializing in digital products. Write a complete Gumroad product page for [PRODUCT_NAME] priced at $[PRICE] targeting [TARGET_AUDIENCE]. Include: (1) Product name (benefit-focused, 5-8 words), (2) Tagline (one sentence - the transformation promised), (3) Hero section copy (3 paragraphs: the problem, the solution, the result), (4) What's included section (list all components with descriptions), (5) Who this is for (3-5 bullet points), (6) Who this is NOT for (2-3 points - builds trust), (7) Sample/preview section (describe what to show), (8) Testimonials (write 5 realistic, specific testimonials from different buyer types), (9) FAQ (8 questions answering objections), (10) Guarantee statement, (11) Final CTA with urgency element. This page should convert at 3-8%.",
+        "Write optimized Etsy listing copy for a digital download product: [PRODUCT_NAME] in the [CATEGORY]. Create: (1) Title (140 chars: keyword-rich, benefit-focused, includes 'digital download' or 'printable' + occasion or niche), (2) Description (800+ words: opens with the buyer's problem, describes the product in detail, lists exactly what files they receive, explains how to use/access it, addresses compatibility, and includes keyword-rich lifestyle copy), (3) 13 tags (mix of broad and specific search terms buyers use), (4) Listing photos descriptions (what to show in each of 5-10 product images to maximize trust and desire). Research competitive pricing and suggest optimal price point."
       ]
     },
     {
@@ -171,6 +224,10 @@
         "Email list (owned audience)",
         "SEO blog content",
         "Facebook groups"
+      ],
+      "chatgpt_prompts": [
+        "Create a complete Pinterest marketing system for selling digital products in the [NICHE] on Etsy/Gumroad. Pinterest drives the most organic traffic to digital product shops. Design: (1) Account optimization (bio, board names, board descriptions - write all copy), (2) Board structure (15 boards with names and SEO descriptions), (3) Pin design strategy (what to show in pins for digital products - mockups, lifestyle shots, text overlay templates), (4) 50 pin description templates using searchable keywords, (5) Daily pinning schedule (using Tailwind automation), (6) Seasonal content calendar for major holidays/events that drive digital product sales, (7) Group board strategy, (8) Rich pin setup guide, (9) How to track which pins drive most sales, (10) Collaboration strategy with Pinterest creators in [NICHE].",
+        "Design a complete email marketing automation system for selling digital products. Create: (1) Welcome sequence for new email subscribers (5 emails - write complete copy for all), (2) Product launch sequence (7-day launch for a new digital product - write all emails), (3) Evergreen sales sequence that sells the product on autopilot (10-email sequence), (4) Abandoned cart recovery sequence (3 emails for Shopify/Gumroad), (5) Post-purchase sequence that generates reviews and referrals (5 emails), (6) Seasonal promotion email templates (5 templates for Black Friday, New Year, Back-to-School, Valentine's Day, etc.). For each email: subject line (3 variations), preview text, full body copy, and CTA. Include A/B testing recommendations."
       ]
     },
     {

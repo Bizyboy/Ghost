@@ -1,7 +1,16 @@
 {
   "workflow_name": "Marketing Automation",
   "description": "Comprehensive marketing automation across email, social media, content, and SEO",
-  "platforms": ["Mailchimp", "HubSpot", "Hootsuite", "Buffer", "ChatGPT", "Canva", "n8n", "Google Analytics"],
+  "platforms": [
+    "Mailchimp",
+    "HubSpot",
+    "Hootsuite",
+    "Buffer",
+    "ChatGPT",
+    "Canva",
+    "n8n",
+    "Google Analytics"
+  ],
   "marketing_channels": [
     "Email marketing",
     "Social media marketing",
@@ -42,6 +51,10 @@
           "duration": "10 days",
           "goal": "Win back inactive subscribers"
         }
+      ],
+      "chatgpt_prompts": [
+        "You are a world-class email marketing strategist. Write a complete 5-email welcome series for [BRAND_NAME] in the [INDUSTRY] space. The subscriber opted in via [LEAD_MAGNET]. Each email should: build trust, deliver value, and progressively move toward conversion. Email 1 (Immediate): Deliver lead magnet + brand story + set expectations for what emails they'll receive. Email 2 (Day 2): Share the biggest mistake people make in [TOPIC] + quick win tip. Email 3 (Day 4): Case study showing transformation from [PROBLEM] to [RESULT]. Email 4 (Day 6): Address the #1 objection your audience has about [PRODUCT/SERVICE]. Email 5 (Day 8): Make the offer with urgency (new subscriber discount). For each email write: subject line (test 3 variations), preview text, full email body (200-350 words), and CTA button text. Use conversational copywriting - no corporate speak.",
+        "Create a 10-email sales campaign for [PRODUCT/SERVICE] priced at $[PRICE] targeting [AUDIENCE_SEGMENT] who haven't purchased yet. The campaign should run over 14 days with strategic timing. Include: urgency builder emails, objection-handling emails, social proof emails, scarcity email, and final deadline email. For each email write: send timing, subject line, preview text, full copy, and P.S. line. The sequence should feel like a story with escalating tension toward the deadline, not a series of desperate sales pitches. Include conversion optimization tips for each email."
       ]
     },
     {
@@ -58,7 +71,18 @@
         "Respond to comments/DMs",
         "Track performance metrics"
       ],
-      "platforms": ["Instagram", "Facebook", "Twitter", "LinkedIn", "TikTok", "Pinterest"]
+      "platforms": [
+        "Instagram",
+        "Facebook",
+        "Twitter",
+        "LinkedIn",
+        "TikTok",
+        "Pinterest"
+      ],
+      "chatgpt_prompts": [
+        "Create a comprehensive 30-day social media content calendar for [BRAND_NAME] in the [INDUSTRY]. The brand voice is [DESCRIBE_VOICE: professional/casual/playful/authoritative]. Post daily across Instagram, LinkedIn, Twitter/X, Facebook, and TikTok. For each post include: platform, content type, caption, hashtags (platform-appropriate), visual description, best posting time, and engagement CTA. Content mix: 30% educational, 25% behind-the-scenes/authentic, 20% promotional, 15% user-generated content prompts, 10% trending/news-jacking. Include 5 viral content ideas specific to [INDUSTRY] and 10 poll/question ideas for audience engagement.",
+        "You are a social media copywriter expert. Write 20 high-engagement social media posts for [BRAND] in the [NICHE]. Each post should have: a hook that stops the scroll (first line), valuable content that establishes expertise, subtle brand positioning, and a question or CTA to drive comments. Formats to include: tips carousel (5 posts), story-format posts (3 posts), controversial opinion posts (3 posts), behind-the-scenes (3 posts), data/statistics posts (3 posts), motivational (3 posts). Write platform-specific versions for Instagram and LinkedIn for each post type."
+      ]
     },
     {
       "task_id": 3,
@@ -73,6 +97,10 @@
         "Guest posts",
         "Case studies",
         "White papers"
+      ],
+      "chatgpt_prompts": [
+        "Develop a comprehensive content marketing strategy for [BRAND_NAME] in [INDUSTRY] targeting [TARGET_AUDIENCE]. The strategy should cover 90 days and include: (1) Content pillars (3-4 core themes aligned with business goals), (2) 50 specific content ideas across blog, video, podcast, and social formats, (3) SEO keyword strategy (20 primary keywords ranked by opportunity), (4) Content distribution plan for each piece, (5) Repurposing framework (how one blog post becomes 10+ pieces of content), (6) KPIs to track, (7) Resource requirements (time/tools/budget). Also write a complete content brief template for your team/VA to use for each piece of content.",
+        "Write a comprehensive pillar page (3,000 words) on '[CORE_TOPIC]' that establishes [BRAND_NAME] as the definitive authority in [INDUSTRY]. This page should: cover the topic more completely than any competitor, be structured for featured snippets, include an interactive table of contents, link to 10+ cluster content pieces (list them), embed FAQ schema, include expert quotes (write 3 realistic expert quotes), use data visualizations (describe what charts to include), and be optimized for the keyword '[PRIMARY_KEYWORD]'. This page should rank for 100+ long-tail variations of the core topic."
       ]
     },
     {
@@ -103,6 +131,10 @@
         "Video courses",
         "Webinars",
         "Free trials"
+      ],
+      "chatgpt_prompts": [
+        "Design and write a complete lead magnet for [BRAND_NAME] targeting [TARGET_AUDIENCE] to build an email list of buyers interested in [PRODUCT/SERVICE]. Create 3 lead magnet options: (1) PDF Guide: Write a complete 1,500-word guide titled '[GUIDE_TITLE]' with actionable steps, templates, and examples, (2) Email Course: Design a 5-day mini-course outline with full content for each lesson (150 words each), (3) Checklist/Template: Create a comprehensive [TOPIC] checklist with 30 specific action items. For each lead magnet: write the opt-in page headline, subheadline, 5 bullet points explaining what they'll get, and CTA button text. Recommend which lead magnet will convert best for [AUDIENCE] and why.",
+        "Create a lead magnet delivery system with follow-up sequence for [LEAD_MAGNET_NAME]. Write: (1) Immediate delivery email with download link + bonus tip, (2) Day 2 email: Did you get a chance to read it? + expand on key point from the lead magnet, (3) Day 4 email: Common mistake related to the lead magnet topic + soft pitch for your solution, (4) Day 7 email: Case study of someone who achieved results + direct offer. Also design the opt-in form copy, thank you page content, and upsell offer presentation for the post-opt-in page."
       ]
     },
     {

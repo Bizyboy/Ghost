@@ -1,7 +1,15 @@
 {
   "workflow_name": "Faceless YouTube Channel Automation",
   "description": "Create and grow YouTube channels without showing your face",
-  "platforms": ["YouTube", "ChatGPT", "ElevenLabs", "Canva", "n8n", "Pictory", "InVideo"],
+  "platforms": [
+    "YouTube",
+    "ChatGPT",
+    "ElevenLabs",
+    "Canva",
+    "n8n",
+    "Pictory",
+    "InVideo"
+  ],
   "channel_types": [
     "Motivational quotes",
     "Top 10 lists",
@@ -25,6 +33,10 @@
         "Check monetization potential",
         "Select niche with high RPM",
         "Validate audience demand"
+      ],
+      "chatgpt_prompts": [
+        "You are a YouTube growth strategist with expertise in faceless channels. Analyze and rank the top 10 faceless YouTube channel niches for maximum monetization in [CURRENT_YEAR]. For each niche provide: (1) average CPM/RPM rate ($), (2) competition level, (3) content creation difficulty, (4) monetization timeline, (5) monthly view potential at 12 months, (6) secondary revenue streams beyond AdSense, (7) best performing video formats, (8) example channels and their estimated monthly revenue. Focus on niches with RPM above $8 and sustainable long-term content opportunities. Rank them by total earning potential for a new creator.",
+        "I want to start a faceless YouTube channel in [CHOSEN_NICHE]. Analyze: (1) Current top 10 performing channels in this niche with their subscriber counts and estimated monthly revenue, (2) the top 20 most-viewed video formats/types, (3) average video length that performs best, (4) content gaps - what's NOT being covered well, (5) audience demographics and what they want most, (6) best thumbnail styles that get high CTR, (7) recommended upload frequency, (8) how long to first monetization realistically. Give me a data-backed go-to-market strategy for this niche."
       ]
     },
     {
@@ -41,7 +53,12 @@
         "Add call-to-actions",
         "Save scripts to Notion"
       ],
-      "output": "video_scripts/"
+      "output": "video_scripts/",
+      "chatgpt_prompts": [
+        "You are an expert YouTube scriptwriter for faceless channels. Write a complete, engaging 10-minute video script on '[VIDEO_TOPIC]' for a [NICHE] faceless YouTube channel. The script should be written for voiceover (no camera presence assumed). Structure: (1) Hook (first 30 seconds - open with a shocking fact, question, or bold statement that makes viewers NEED to keep watching), (2) Brief intro that states the promise of the video, (3) Main content (7-8 key points with transitions), (4) Engaging storytelling throughout with vivid descriptions for stock footage/b-roll, (5) Mid-video engagement prompt (ask viewers to comment/like), (6) Strong conclusion with key takeaways, (7) Subscribe CTA. Include [B-ROLL SUGGESTION: description] tags throughout. Target retention-optimized pacing with pattern interrupts every 60-90 seconds.",
+        "Write a viral-format YouTube script for a '[TOPIC]' video targeting the keyword '[TARGET_KEYWORD]'. Use the proven 'Curiosity Gap + Value Delivery' formula. The script must: (1) Open with a statement that creates intense curiosity in the first 5 seconds, (2) Tease the most interesting revelation to keep viewers watching, (3) Use storytelling with a clear narrative arc (setup, conflict, resolution), (4) Include 3 pattern interrupts (tone changes, shocking stats, rhetorical questions), (5) Naturally integrate the keyword for SEO without sounding robotic, (6) End with a compelling reason for viewers to subscribe for part 2 or more content. Write all on-screen text suggestions and B-roll descriptions. Target: 85%+ audience retention.",
+        "Create a complete 30-day YouTube content calendar for a faceless [NICHE] channel. For each video provide: (1) click-worthy title, (2) target keyword and estimated monthly searches, (3) script outline (5-7 key points), (4) ideal video length, (5) thumbnail concept description, (6) B-roll style needed, (7) monetization angle (AdSense, affiliate product to mention, sponsorship opportunity). Organize content into themed weeks and ensure a mix of: trending topics, evergreen content, controversial/debate topics, and list/countdown formats. Prioritize videos with high RPM potential."
+      ]
     },
     {
       "task_id": 3,
@@ -107,7 +124,11 @@
         "Include timestamps",
         "Add end screens and cards"
       ],
-      "output": "seo_metadata.json"
+      "output": "seo_metadata.json",
+      "chatgpt_prompts": [
+        "You are a YouTube SEO expert. Optimize this video for maximum discoverability: Video Topic: '[TOPIC]'. Create: (1) 5 click-worthy title options (include primary keyword naturally, under 70 characters, create curiosity), (2) Full video description (500+ words) that naturally incorporates the primary keyword '[KEYWORD]' and 5 LSI keywords, includes timestamps, call to action, and links section, (3) 30 relevant tags ordered by priority, (4) Custom thumbnail text suggestions (bold, contrasting, emotional), (5) End screen/card strategy to maximize watch time and subscriptions, (6) Community post ideas to boost algorithm signals, (7) Best time to publish for this niche. Also explain what the YouTube algorithm prioritizes for [NICHE] content and how to trigger the browse features and suggested video algorithm.",
+        "Analyze the top 10 ranking YouTube videos for the search term '[TARGET_KEYWORD]' and tell me: what makes their titles compelling, what keywords appear in their descriptions, how long they are, what their retention hooks seem to be based on thumbnails/titles, and what content gaps exist that my video could fill. Then write an optimized title, description, and tag set that would help my video rank above the existing results. Include a strategy for getting early views and watch time to boost the algorithm in the first 48 hours after publishing."
+      ]
     },
     {
       "task_id": 7,

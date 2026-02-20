@@ -1,7 +1,17 @@
 {
   "workflow_name": "Affiliate Marketing Automation",
   "description": "Automated affiliate marketing system for generating passive income through content and recommendations",
-  "platforms": ["Amazon Associates", "ClickBank", "ShareASale", "YouTube", "WordPress", "ChatGPT", "Canva", "n8n", "Notion"],
+  "platforms": [
+    "Amazon Associates",
+    "ClickBank",
+    "ShareASale",
+    "YouTube",
+    "WordPress",
+    "ChatGPT",
+    "Canva",
+    "n8n",
+    "Notion"
+  ],
   "tasks": [
     {
       "task_id": 1,
@@ -17,7 +27,11 @@
         "Select 3-5 niches with high potential",
         "Document findings in Notion"
       ],
-      "output": "niche_research.json"
+      "output": "niche_research.json",
+      "chatgpt_prompts": [
+        "You are an affiliate marketing strategist with 10+ years of experience. Analyze and rank the top 10 affiliate marketing niches for [CURRENT_YEAR] based on: commission rates (target 30%+), competition level, buyer intent, content creation ease, and long-term sustainability. For each niche provide: average commission percentage, top 3 affiliate programs, average order value, typical buyer demographics, best content formats, and estimated monthly earning potential for a new affiliate. Focus on niches where Amazon Associates, ClickBank, or high-ticket programs dominate.",
+        "Research the most profitable sub-niches within [BROAD_NICHE] for affiliate marketing. I want niches where: (1) products cost $100-$500 (higher commissions), (2) buyers are passionate and spend repeatedly, (3) there are multiple affiliate programs competing for publishers, (4) evergreen content performs well. List 8 specific sub-niches with their top affiliate programs, average commission, and 5 content angle ideas for each. Also identify which sub-niche has the best keyword difficulty vs. traffic potential ratio."
+      ]
     },
     {
       "task_id": 2,
@@ -49,7 +63,11 @@
         "Select 5-10 products daily",
         "Generate unique affiliate links"
       ],
-      "output": "selected_products.json"
+      "output": "selected_products.json",
+      "chatgpt_prompts": [
+        "You are an affiliate product analyst. Evaluate these [PRODUCT_LIST] for affiliate promotion potential. For each product score it 1-10 on: commission rate, conversion rate likelihood, refund rate risk, audience fit for [YOUR_NICHE], competition level, and content creation opportunity. Calculate a total affiliate opportunity score and rank them. For the top 3 products, provide a detailed promotion strategy including: best content types, SEO keywords to target, email marketing angles, and estimated earnings per 1000 clicks.",
+        "Research the top 15 best-selling products in [NICHE_CATEGORY] on Amazon right now. For each product identify: current BSR (Best Seller Rank), number of reviews, average rating, price point, Amazon commission rate, and whether there's a better affiliate program than Amazon Associates offering higher commissions. Prioritize products with 4+ stars, 500+ reviews, and priced $50+. Create a shortlist of 5 products to promote with full justification."
+      ]
     },
     {
       "task_id": 4,
@@ -66,7 +84,12 @@
         "Optimize for SEO keywords",
         "Schedule WordPress posts via API"
       ],
-      "output": "blog_posts/"
+      "output": "blog_posts/",
+      "chatgpt_prompts": [
+        "You are an expert SEO content writer specializing in affiliate marketing. Write a comprehensive 2,500-word buyer's guide for '[KEYWORD]' (example: 'Best [PRODUCT_CATEGORY] for [USE_CASE]'). Structure: (1) Introduction with the reader's problem/need (150 words), (2) What to look for when buying - 5 key criteria (400 words), (3) Top 7 product reviews with pros/cons and affiliate link placeholder (1,200 words), (4) Comparison table, (5) FAQ section with 5 questions (300 words), (6) Final verdict and recommendation (150 words). Naturally integrate the primary keyword '[KEYWORD]' and LSI keywords throughout. Write in a helpful, trustworthy tone that converts readers to buyers.",
+        "Write a 'vs' comparison article between [PRODUCT_A] and [PRODUCT_B] that's optimized for the keyword '[PRODUCT_A] vs [PRODUCT_B]'. Structure: intro (who each product is for), feature-by-feature comparison table, detailed analysis of 5 key differences, pricing comparison, verdict for different user types, and FAQ. Include honest pros and cons for both products. The article should be 1,800+ words, rank for the comparison keyword, and naturally direct readers to your preferred affiliate product without being overly promotional.",
+        "Create a complete content brief for a 3,000-word ultimate guide on '[TOPIC]' targeting the keyword '[PRIMARY_KEYWORD]' with [MONTHLY_SEARCH_VOLUME] monthly searches. Include: target audience analysis, search intent classification, recommended H1/H2/H3 structure (full outline), key points to cover for each section, internal linking opportunities, external authority sources to cite, semantic/LSI keywords to include, recommended word count per section, and affiliate product placement suggestions. Make this guide comprehensive enough to rank #1 on Google."
+      ]
     },
     {
       "task_id": 5,
@@ -82,7 +105,12 @@
         "Include timestamps for products",
         "Upload and optimize for SEO"
       ],
-      "output": "youtube_videos/"
+      "output": "youtube_videos/",
+      "chatgpt_prompts": [
+        "You are a YouTube scriptwriter specializing in affiliate marketing review videos. Write a complete, engaging 10-minute video script for a review of [PRODUCT_NAME] priced at $[PRICE]. Structure: (1) Hook (first 30 seconds - create curiosity without clickbait), (2) Who this product is for, (3) Unboxing/feature walkthrough (if applicable), (4) 5 things I love about it, (5) 3 honest downsides, (6) Who should NOT buy this, (7) Price/value comparison with alternatives, (8) Final verdict, (9) Call to action (affiliate link in description). Use a conversational, authentic tone. Include B-roll suggestions in brackets. Add timestamps outline at the end.",
+        "Write a YouTube video script for a 'Top 5 [PRODUCT_CATEGORY] for [USE_CASE]' video targeting the keyword '[TARGET_KEYWORD]'. The video should be 8-12 minutes long. Include: attention-grabbing intro (state the subscriber benefit immediately), quick preview of all 5 products, detailed review of each product (150-200 words per product), clear ranking criteria, comparison at the end, and strong affiliate CTA. Also write: video title options (5 variations), description with affiliate disclaimer and links template, 15 tags, and thumbnail text suggestion.",
+        "Create a complete YouTube content strategy for an affiliate channel in the [NICHE] space. Include: 30 video title ideas covering reviews, comparisons, tutorials, and listicles that target high buyer-intent keywords, recommended upload frequency, content pillars (3-4 themes), monetization timeline, and affiliate programs to join. For each video idea, suggest: target keyword, estimated search volume tier (high/medium/low), video length, content format, and affiliate product to promote."
+      ]
     },
     {
       "task_id": 6,
@@ -98,7 +126,11 @@
         "Segment subscribers by interest",
         "Send weekly product recommendations"
       ],
-      "output": "email_campaigns/"
+      "output": "email_campaigns/",
+      "chatgpt_prompts": [
+        "Create a complete lead magnet strategy for an affiliate marketing site in the [NICHE] niche. Design 3 different lead magnets: (1) A PDF checklist/guide (write the full 500-word content), (2) A mini email course (write 5-day sequence, 200 words per email), (3) A resource/tool list (create the full list with 20 items). For each lead magnet, write the opt-in page headline, subheadline, bullet points, and CTA button text. The lead magnets should naturally lead subscribers toward purchasing [PRODUCT_CATEGORY] through affiliate links.",
+        "Write a 10-email affiliate marketing nurture sequence for subscribers who opted in for [LEAD_MAGNET] in the [NICHE] space. Each email should: build trust, provide genuine value, and naturally progress toward recommending affiliate products. Email 1: Welcome + deliver lead magnet. Email 2-4: Pure value/tips. Email 5: Soft introduction to a solution (your affiliate product). Email 6-7: Case studies/social proof. Email 8: Direct recommendation with affiliate link. Email 9: Handle objections. Email 10: Final urgency/scarcity. Include subject lines, preview text, and full email bodies for all 10 emails."
+      ]
     },
     {
       "task_id": 7,
@@ -114,7 +146,10 @@
         "Schedule posts across platforms",
         "Engage with followers"
       ],
-      "output": "social_posts.json"
+      "output": "social_posts.json",
+      "chatgpt_prompts": [
+        "Create 30 days of social media content for promoting [AFFILIATE_PRODUCT/NICHE] across Instagram, Pinterest, and TikTok. For each day include: platform-specific content idea, caption (with relevant hashtags), content type (image/video/carousel/reel), best posting time, and engagement hook. Mix content: 40% educational/value, 30% inspirational/lifestyle, 20% product-focused, 10% behind-the-scenes. Ensure all promotional posts include natural affiliate link CTAs without being overly salesy. Suggest 10 viral content angles for the [NICHE] affiliate space."
+      ]
     },
     {
       "task_id": 8,
@@ -130,7 +165,11 @@
         "Implement call-to-action buttons",
         "A/B test different versions"
       ],
-      "output": "landing_pages/"
+      "output": "landing_pages/",
+      "chatgpt_prompts": [
+        "You are a world-class conversion copywriter. Write complete landing page copy for promoting [AFFILIATE_PRODUCT] to [TARGET_AUDIENCE]. Include: (1) Power headline (outcome-focused, under 10 words), (2) Subheadline expanding the promise, (3) Opening paragraph identifying the reader's exact pain point, (4) What they'll get/benefit section (5 bullet points), (5) Social proof section (write 3 realistic testimonial templates), (6) Features breakdown with benefit translations, (7) About/credibility section, (8) Guarantee/risk reversal statement, (9) FAQ (5 questions), (10) Final CTA section with urgency. Use proven copywriting frameworks (AIDA, PAS, StoryBrand). Target conversion rate: 3-5%.",
+        "Create an A/B testing plan for a landing page promoting [AFFILIATE_PRODUCT]. Design 3 different hero section variations testing: (A) Problem-focused headline, (B) Transformation headline, (C) Curiosity/intrigue headline. For each variation write the complete hero section (headline, subheadline, bullet points, CTA). Also suggest 5 other page elements to A/B test with specific variations to test, expected impact on conversion rate, and how to measure success."
+      ]
     },
     {
       "task_id": 9,
