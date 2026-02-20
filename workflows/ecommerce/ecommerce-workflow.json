@@ -1,7 +1,16 @@
 {
   "workflow_name": "E-commerce Automation",
   "description": "Automated e-commerce business using Shopify, WooCommerce, and Amazon",
-  "platforms": ["Shopify", "WooCommerce", "Amazon", "Etsy", "eBay", "ChatGPT", "Canva", "n8n"],
+  "platforms": [
+    "Shopify",
+    "WooCommerce",
+    "Amazon",
+    "Etsy",
+    "eBay",
+    "ChatGPT",
+    "Canva",
+    "n8n"
+  ],
   "business_models": [
     "Private label products",
     "Wholesale",
@@ -21,6 +30,10 @@
         "Check profit margins (aim for 30%+)",
         "Validate demand with Google Trends",
         "Use ChatGPT to analyze market opportunities"
+      ],
+      "chatgpt_prompts": [
+        "You are an expert Amazon FBA and e-commerce product researcher. Find the top 10 product opportunities for selling on Amazon/Shopify in the [CATEGORY] space. For each product: (1) describe the exact product and its variations, (2) estimate monthly sales volume (use BSR data if provided), (3) calculate estimated profit margin (retail price - COGS - Amazon fees - shipping), (4) assess competition density (# of competitors, review counts needed to compete), (5) identify the product's main selling season, (6) suggest a differentiation strategy to beat existing listings, (7) recommend the ideal price point. Focus on products in the $20-$150 range with 30%+ margins and fewer than 500 reviews on the top 3 listings.",
+        "Analyze this product idea for Amazon FBA viability: [PRODUCT_NAME]. Provide a complete market analysis: (1) Keyword research - top 10 keywords buyers use, estimated monthly search volume, and competition level for each, (2) Competitor analysis - top 5 competitors, their average rating, review count, price, and weaknesses, (3) Profit calculation - supplier cost estimate, Amazon fees breakdown, shipping cost, and net margin at different price points, (4) Demand validation - seasonal trends, year-round vs. seasonal demand, (5) Private label opportunity - can I brand this and differentiate? (6) Go/No-go recommendation with specific reasoning."
       ]
     },
     {
@@ -47,6 +60,10 @@
         "Design packaging",
         "Write brand story with ChatGPT",
         "Register trademark"
+      ],
+      "chatgpt_prompts": [
+        "You are a brand strategist and copywriter. Create a complete brand identity for an e-commerce brand in the [NICHE] space targeting [TARGET_AUDIENCE]. Deliverables: (1) Brand name ideas (10 options with domain availability considerations), (2) Brand story (300-word narrative that creates emotional connection), (3) Brand values (5 core values with descriptions), (4) Brand voice guide (adjectives, do/don't examples, sample copy), (5) Tagline options (5 variations), (6) Target customer persona (detailed profile including demographics, psychographics, pain points, aspirations), (7) Positioning statement (one paragraph differentiating from competition), (8) Product packaging copy template, (9) About Us page (500 words for website). The brand should feel [premium/approachable/bold/sustainable/innovative].",
+        "Write the complete brand story and About Us page for [BRAND_NAME] - an e-commerce company selling [PRODUCTS] to [TARGET_CUSTOMER]. The story should: start with the founder's 'why' (the relatable problem they personally experienced), show the journey from problem to solution, establish credibility and passion, connect emotionally with the target customer, and end with the brand mission statement. Length: 400-600 words. Tone: [authentic/professional/inspiring]. Also write 3 short versions (50 words, 100 words, 150 words) for use in social media, Amazon seller profile, and email campaigns respectively."
       ]
     },
     {
@@ -75,6 +92,10 @@
         "Design product images",
         "Add A+ content (Amazon)",
         "Set competitive pricing"
+      ],
+      "chatgpt_prompts": [
+        "You are an Amazon listing optimization expert. Create a complete, A9-algorithm-optimized product listing for [PRODUCT_NAME] in the [CATEGORY] category. Deliverables: (1) Title (under 200 characters, include brand name, primary keyword, top features, size/quantity): write 3 variations and recommend the best, (2) 7 Bullet points highlighting benefits-first features (start with keyword, capitalize the first few words, focus on customer outcomes, 200 characters each), (3) Product description (1,000+ characters using relevant keywords naturally, tell the product story, address objections, include lifestyle use cases), (4) Backend search terms (250 bytes - no repetition, no commas, include synonyms and misspellings), (5) A+ Content main headline and 3 module descriptions, (6) Suggested primary and secondary keywords from the category. Optimize for both conversion rate and searchability.",
+        "Write high-converting Shopify product page copy for [PRODUCT_NAME] priced at $[PRICE]. The copy must: open with the customer's desire/outcome (not the product features), use sensory language that helps them imagine owning the product, address the top 3 buying objections (quality, price, need), include social proof hooks, have a benefit-led bullet point section (7 bullets), a detailed description section (300-400 words), a care/usage instruction section, and a FAQ section (5 questions). Also write: the page title tag (55 chars), meta description (155 chars), and 3 product image alt text descriptions. Make the copy feel premium and trustworthy."
       ]
     },
     {
@@ -117,6 +138,10 @@
         "Process returns and refunds",
         "Collect product reviews",
         "Escalate complex issues"
+      ],
+      "chatgpt_prompts": [
+        "Create a comprehensive customer service script and response library for an e-commerce store selling [PRODUCT_CATEGORY]. Write professional, empathy-first responses for these scenarios: (1) Order not arrived after expected date, (2) Product arrived damaged, (3) Wrong item received, (4) Want to return/exchange, (5) Product doesn't work as described, (6) Requesting a refund after 30 days, (7) Negative review threat, (8) Size/compatibility question before purchase, (9) Wholesale/bulk order inquiry, (10) Unhappy with shipping speed. Each response should: acknowledge the issue with empathy, offer a clear solution, retain the customer relationship, protect the business, and be under 150 words. Also write the auto-response email for when a support ticket is opened.",
+        "Design a proactive customer satisfaction system for [STORE_NAME]. Write: (1) Post-purchase confirmation email (delivery day) - excitement building, (2) Delivery day email - welcome message + usage tips, (3) 7-day check-in email - 'How are you loving it?' + review request, (4) 30-day loyalty email - 'You've been a customer for a month!' + exclusive discount, (5) Win-back email for customers who haven't bought in 90 days, (6) Birthday email template with special offer, (7) Review request sequence (3 emails), (8) Product education email series (3 emails teaching them to maximize value). Include subject lines, preview text, and full email copy for each."
       ]
     },
     {
@@ -131,6 +156,10 @@
         "Respond to negative reviews",
         "Showcase positive reviews",
         "Track review metrics"
+      ],
+      "chatgpt_prompts": [
+        "Write a complete Amazon review management strategy for a new product with [X] reviews. Create: (1) Post-purchase follow-up email sequence (3 emails) that maximizes organic review generation without violating Amazon policies - include full email copy, (2) Response templates for 1-star reviews (5 variations for different complaint types), (3) Response templates for 2-star reviews, (4) Response templates for 3-star reviews, (5) Response template for 4-star reviews that could become 5-star, (6) Response template for positive 5-star reviews, (7) Strategy to leverage positive reviews in marketing copy, (8) How to handle fake negative reviews from competitors. All responses should be professional, empathetic, and protect brand reputation.",
+        "You are an expert e-commerce copywriter. Rewrite this negative review response for [BRAND_NAME]: '[PASTE_RESPONSE]'. Make it: acknowledge the specific issue mentioned (not generic), show genuine empathy without being defensive, offer a concrete solution with next steps, invite them back to resolve offline, and end with a brand-positive statement. Then write 10 'thank you for your review' responses for 5-star reviews that are personalized, genuine, and subtly encourage other customers to purchase. Each response should be under 80 words."
       ]
     },
     {

@@ -1,7 +1,16 @@
 {
   "workflow_name": "Blogging Automation for Income",
   "description": "Automated blogging system for generating income through ads, sponsorships, and digital products",
-  "platforms": ["WordPress", "Medium", "Substack", "ChatGPT", "Canva", "Google AdSense", "n8n", "Notion"],
+  "platforms": [
+    "WordPress",
+    "Medium",
+    "Substack",
+    "ChatGPT",
+    "Canva",
+    "Google AdSense",
+    "n8n",
+    "Notion"
+  ],
   "revenue_streams": [
     "Google AdSense",
     "Sponsored posts",
@@ -23,6 +32,10 @@
         "Identify content gaps",
         "Create 30-day content calendar",
         "Store in Notion database"
+      ],
+      "chatgpt_prompts": [
+        "You are an expert content strategist and SEO specialist. Create a comprehensive 30-day blog content calendar for a blog in the [NICHE] space targeting [TARGET_AUDIENCE]. For each of the 30 posts include: (1) SEO-optimized title, (2) primary target keyword with estimated monthly search volume tier, (3) content type (how-to, listicle, review, case study, opinion), (4) word count target, (5) content angle/unique hook, (6) monetization method (ads, affiliate, product). Mix content pillars: 40% educational, 30% product-focused, 20% inspirational, 10% news/trends. Prioritize keywords with high buyer intent. Also suggest the optimal publishing schedule and content clusters to build topical authority.",
+        "Analyze the top 10 blog posts from [COMPETITOR_WEBSITE] and identify: their content gaps (topics they haven't covered well), their most successful content formats, the keywords they're ranking for that have high buyer intent, and how I can create 10x better content on the same topics. Then suggest 20 unique blog post ideas that would outrank their content and attract readers who are ready to buy. Include estimated keyword difficulty and suggested content differentiation strategy for each idea."
       ]
     },
     {
@@ -40,7 +53,12 @@
         "Schedule posts via WordPress API",
         "Auto-publish at optimal times"
       ],
-      "output": "blog_posts/"
+      "output": "blog_posts/",
+      "chatgpt_prompts": [
+        "You are an expert SEO writer and content creator. Write a complete, publish-ready 2,500-word blog post on '[BLOG_TITLE]' targeting the primary keyword '[PRIMARY_KEYWORD]'. Requirements: (1) Compelling intro that hooks the reader in the first 3 sentences and states what they'll learn, (2) Proper H2/H3 structure for SEO, (3) Keyword naturally integrated 8-12 times without stuffing, (4) Include actionable tips the reader can implement immediately, (5) Data/statistics from credible sources (use [YEAR] statistics), (6) Internal link suggestions marked as [INTERNAL LINK: topic], (7) External link suggestions to authority sources, (8) Conclusion with clear next step CTA, (9) Meta title (under 60 chars) and meta description (under 160 chars), (10) 5 social media post variations to promote this article. Write in a conversational, expert tone that's engaging and trustworthy.",
+        "Write an expert-level 3,000-word ultimate guide on '[TOPIC]' that will rank #1 on Google for '[TARGET_KEYWORD]'. This guide should be the definitive resource on the topic - more comprehensive than anything currently ranking. Include: executive summary, table of contents, background/context section, step-by-step main content with examples, common mistakes to avoid, expert tips section, real-world case study, FAQ answering the top 10 questions people have about this topic, and a resources/tools section. Use E-E-A-T principles (Experience, Expertise, Authoritativeness, Trustworthiness). Include structured data suggestions for featured snippet optimization.",
+        "Create 10 magnetic blog post title options for an article about '[TOPIC]' targeting '[TARGET_AUDIENCE]'. Each title should: include the primary keyword '[KEYWORD]', create curiosity or promise clear value, be under 65 characters for SEO, and be compelling enough to get a 5%+ CTR on Google. Then select the best title and explain why it will outperform the others. Also write 5 alternative titles for A/B testing on social media."
+      ]
     },
     {
       "task_id": 3,
@@ -71,6 +89,10 @@
         "Schedule across platforms",
         "Engage with comments",
         "Repurpose top content"
+      ],
+      "chatgpt_prompts": [
+        "Transform this blog post excerpt '[PASTE_EXCERPT]' into 5 different social media posts optimized for: (1) Twitter/X thread (8-10 tweets), (2) LinkedIn article intro and 3 carousels, (3) Instagram caption with 20 relevant hashtags, (4) Facebook post for a [NICHE] group, (5) Pinterest pin description. Each version should be platform-native (right length, tone, format), drive traffic back to the full blog post, and maximize engagement. Also suggest the best time to post each platform version for maximum reach.",
+        "Create a complete social media repurposing strategy for my blog about [NICHE]. I publish 1 blog post per day. Design a system to extract maximum value from each post: list exactly what derivative content to create from each blog post (quotes, statistics, tips, questions, polls, reels scripts), which platforms to post on, posting schedule, and how to use automation tools (n8n/Buffer) to streamline. Give me templates for each content type I can fill in quickly."
       ]
     },
     {
@@ -87,6 +109,10 @@
         "Segment audience",
         "Schedule and send",
         "Track engagement metrics"
+      ],
+      "chatgpt_prompts": [
+        "Write a complete weekly email newsletter for a [NICHE] blog for the week of [DATE]. Include: (1) Subject line (A/B test: provide 3 options with different angles), (2) Preview text (under 90 characters), (3) Personalized greeting, (4) This week's top blog post summary (150 words) with CTA to read more, (5) Quick tip or insight not published on the blog (100 words), (6) Curated resource from another creator (builds goodwill), (7) Community spotlight or reader question, (8) Upcoming content preview, (9) PS: soft product/affiliate recommendation. Total length: 400-600 words. Make it feel like a personal email from a trusted friend, not a marketing blast.",
+        "Design a welcome email sequence for new subscribers to my [NICHE] blog. Write 5 emails: Email 1 (immediate): Welcome + deliver promised freebie + set expectations. Email 2 (Day 2): Share my most popular blog post + personal story. Email 3 (Day 4): Teach one key concept + link to related content. Email 4 (Day 7): Share a quick win/tip they can use today. Email 5 (Day 10): Soft introduction to [PRODUCT/AFFILIATE] as the solution to their main problem. For each email: write subject line, preview text, full email body (200-300 words), and CTA. Tone: warm, knowledgeable, non-salesy."
       ]
     },
     {
@@ -117,6 +143,10 @@
         "Negotiate rates",
         "Create sponsored content",
         "Track in Notion database"
+      ],
+      "chatgpt_prompts": [
+        "Write a professional media kit introduction and pitch email for my blog about [NICHE] with the following stats: [MONTHLY_PAGEVIEWS] monthly pageviews, [EMAIL_SUBSCRIBERS] email subscribers, [SOCIAL_FOLLOWERS] social followers, [DOMAIN_AUTHORITY] domain authority. The pitch should: introduce the blog and audience, demonstrate value to the sponsor, outline sponsored content packages (3 tiers with pricing guidance), include a case study of results from a past partnership (or example), and have a clear next step CTA. Also write 3 different cold outreach email templates for approaching brands at different budget levels (startup, mid-size, enterprise).",
+        "Create a sponsored blog post about [BRAND/PRODUCT] for my [NICHE] audience. Requirements: (1) Blend naturally with my existing editorial style, (2) Lead with reader value, not a sales pitch, (3) Clearly disclose the sponsorship in a non-intrusive way, (4) Include the brand's key messages: [KEY_MESSAGES], (5) 1,000-1,500 words, (6) Include a genuine personal recommendation, (7) Strong CTA driving to [SPONSOR_LINK]. Make the post feel authentic and helpful, not like an advertisement."
       ]
     },
     {

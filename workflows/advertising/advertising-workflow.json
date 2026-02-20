@@ -1,7 +1,16 @@
 {
   "workflow_name": "Digital Advertising Automation",
   "description": "Automated advertising campaigns across Google, Facebook, Instagram, TikTok, and YouTube",
-  "platforms": ["Google Ads", "Facebook Ads", "Instagram Ads", "TikTok Ads", "YouTube Ads", "ChatGPT", "Canva", "n8n"],
+  "platforms": [
+    "Google Ads",
+    "Facebook Ads",
+    "Instagram Ads",
+    "TikTok Ads",
+    "YouTube Ads",
+    "ChatGPT",
+    "Canva",
+    "n8n"
+  ],
   "tasks": [
     {
       "task_id": 1,
@@ -16,6 +25,10 @@
         "Set budget and timeline",
         "Choose platforms",
         "Create campaign structure"
+      ],
+      "chatgpt_prompts": [
+        "You are a performance marketing strategist with expertise in running profitable ad campaigns across Google, Facebook, and TikTok. Create a comprehensive advertising campaign plan for [BUSINESS_NAME] selling [PRODUCT/SERVICE] at $[PRICE] to [TARGET_AUDIENCE]. The plan should include: (1) Campaign objectives and KPIs (define success metrics: target ROAS, CPA, CTR benchmarks), (2) Platform allocation strategy with budget split rationale (which platforms get how much and why), (3) Campaign structure (campaigns \u2192 ad sets \u2192 ads hierarchy), (4) Audience strategy (cold, warm, hot audiences and how to move people through), (5) Creative strategy (ad formats, content types, messaging angles), (6) Budget ramp-up schedule (Week 1 testing, Week 2-4 scaling), (7) Attribution model recommendation, (8) Retargeting funnel design, (9) Competitive analysis of how competitors are advertising, (10) 90-day revenue projection at $[DAILY_BUDGET] spend.",
+        "Design a full-funnel advertising strategy for [PRODUCT/SERVICE] using the '3-phase customer journey' model. Phase 1 (TOFU - Awareness): targeting cold audiences who don't know the brand. Phase 2 (MOFU - Consideration): retargeting engaged users with more detailed content. Phase 3 (BOFU - Conversion): retargeting high-intent users near purchase. For each phase specify: platforms used, audience definition, ad format, messaging angle, creative style, bid strategy, budget allocation (% of total), KPIs to measure, and what success looks like before advancing to the next phase. Also design the cross-platform tracking setup to measure attribution across all touchpoints."
       ]
     },
     {
@@ -32,7 +45,12 @@
         "Adapt copy for each platform",
         "A/B test different angles"
       ],
-      "output": "ad_copy.json"
+      "output": "ad_copy.json",
+      "chatgpt_prompts": [
+        "You are a world-class performance copywriter specializing in paid advertising. Write 10 complete Facebook/Instagram ad copy variations for [PRODUCT/SERVICE] targeting [AUDIENCE_DESCRIPTION]. For each ad include: (1) Primary text (3 versions: short under 80 chars, medium under 200 chars, long 300+ chars), (2) Headline (5 options under 40 characters each), (3) Description (under 30 characters), (4) Call-to-action button recommendation. Test these angles: (A) Problem/pain point, (B) Transformation/aspiration, (C) Social proof/authority, (D) Curiosity/intrigue, (E) Offer/value proposition, (F) Fear of missing out, (G) Story-based, (H) Question hook, (I) Shocking statistic, (J) Direct benefit statement. For each angle explain the psychology behind why it works for [TARGET_AUDIENCE].",
+        "Create a complete Google Ads copy package for [BUSINESS] targeting the keyword '[TARGET_KEYWORD]'. Write: (1) 15 headlines (under 30 characters each, vary between keyword-focused, benefit-focused, and CTA-focused), (2) 4 descriptions (under 90 characters each), (3) Sitelink extensions (6 sitelinks with headline and 2 description lines each), (4) Callout extensions (10 callouts under 25 characters), (5) Structured snippet extensions (3 categories with 4 values each). Also write a responsive search ad combining the best of the above. Optimize for a 5%+ CTR with high quality score. Include negative keyword suggestions to prevent wasted spend.",
+        "Write 5 complete TikTok ad scripts for [PRODUCT] targeting [DEMOGRAPHIC] aged [AGE_RANGE]. Each script should be 15-30 seconds long and follow TikTok's proven native format. Include: (1) Hook (first 3 seconds - must be so compelling they CAN'T scroll past), (2) Product showcase/demonstration, (3) Key benefit highlight, (4) Social proof moment, (5) Clear CTA. Write the exact spoken script, on-screen text overlays, visual action directions, and background music mood. Make these feel like organic TikTok content, not ads. Suggested video styles: POV format, before/after reveal, reaction-style, storytelling, and transformation format."
+      ]
     },
     {
       "task_id": 3,
@@ -81,7 +99,11 @@
         "Flag underperformers",
         "Generate reports in Notion"
       ],
-      "output": "performance_reports/"
+      "output": "performance_reports/",
+      "chatgpt_prompts": [
+        "You are a performance marketing analyst. Analyze these ad campaign metrics and provide actionable optimization recommendations: [PASTE_METRICS_HERE]. Specifically: (1) Diagnose which campaigns/ad sets are profitable vs. unprofitable based on ROAS, CPA, and volume, (2) Identify the top 3 issues causing underperformance, (3) Recommend specific actions (pause, scale, test) for each campaign with reasoning, (4) Suggest 5 new audience or creative tests to improve overall performance, (5) Calculate the optimal budget reallocation to maximize total profitable revenue, (6) Identify the best-performing creative angles and explain why they're working, (7) Forecast expected results if recommendations are implemented. Format as an executive summary with a prioritized action plan.",
+        "Create a complete advertising analytics dashboard template and weekly reporting framework for a [BUSINESS_TYPE] spending $[BUDGET]/month on ads across Facebook, Google, and TikTok. Specify: (1) Exactly which metrics to track for each platform (list all KPIs with target benchmarks), (2) How to calculate true ROAS accounting for all costs, (3) Creative performance analysis process (how to identify winning vs. losing ads early), (4) Audience fatigue detection signals, (5) Weekly review checklist (what to check every Monday), (6) Monthly review template, (7) When to scale and when to pull back, (8) Competitor monitoring strategy, (9) Budget allocation decision framework, (10) Red flags that indicate the account needs immediate attention."
+      ]
     },
     {
       "task_id": 6,
@@ -111,6 +133,10 @@
         "Design retargeting ads",
         "Set up sequential messaging",
         "Track conversion paths"
+      ],
+      "chatgpt_prompts": [
+        "Design a complete retargeting funnel for [BUSINESS] using Facebook Pixel data. Create audience segments and specific ad strategies for: (1) All website visitors (last 30 days) - awareness retargeting, (2) Product/service page viewers (last 14 days) - consideration retargeting, (3) Add to cart abandoners (last 7 days) - high intent conversion focus, (4) Checkout abandoners (last 3 days) - maximum urgency conversion, (5) Past purchasers (last 180 days) - upsell/cross-sell/loyalty, (6) Lookalike audiences based on purchasers - expansion. For each segment write: the ad angle, full ad copy variations, creative recommendations, bidding strategy, daily budget, frequency cap, and expected performance benchmarks. Include the retargeting sequence timing and message progression.",
+        "Write a complete sequence of 7 retargeting ads for [PRODUCT] targeting people who visited the product page but didn't purchase. Space these over 14 days. Ad 1 (Day 1-2): Simple reminder with benefit. Ad 2 (Day 3-4): Address the most common objection. Ad 3 (Day 5-6): Social proof - customer testimonial. Ad 4 (Day 7-8): Scarcity/limited stock. Ad 5 (Day 9-10): Added value - bonus or guide. Ad 6 (Day 11-12): Price anchor - show the value vs. cost. Ad 7 (Day 13-14): Final deadline offer with discount. For each ad: write primary text, headline, description, CTA, and creative direction. Include frequency cap settings to prevent ad fatigue."
       ]
     }
   ],

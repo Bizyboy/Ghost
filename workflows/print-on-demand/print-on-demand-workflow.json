@@ -1,7 +1,17 @@
 {
   "workflow_name": "Print on Demand Automation",
   "description": "Automated print-on-demand business with zero inventory",
-  "platforms": ["Printful", "Printify", "Redbubble", "Teespring", "Etsy", "Shopify", "ChatGPT", "Canva", "Midjourney"],
+  "platforms": [
+    "Printful",
+    "Printify",
+    "Redbubble",
+    "Teespring",
+    "Etsy",
+    "Shopify",
+    "ChatGPT",
+    "Canva",
+    "Midjourney"
+  ],
   "products": [
     "T-shirts",
     "Hoodies",
@@ -38,6 +48,11 @@
         "Quotes and motivation",
         "Holidays and occasions",
         "Hobbies (fishing, hiking, etc.)"
+      ],
+      "chatgpt_prompts": [
+        "You are a print-on-demand expert who has generated over $500,000 in POD sales. Help me identify the top 10 most profitable niches for print-on-demand in [CURRENT_YEAR]. For each niche provide: (1) specific target audience (be very specific - 'cat moms aged 25-45 who treat cats like children' not just 'cat lovers'), (2) top 5 product types that sell best in this niche, (3) price points buyers expect to pay, (4) best marketplaces to sell (Etsy vs Redbubble vs Amazon Merch), (5) design styles that perform (text-based vs illustration vs photography), (6) seasonal demand peaks, (7) estimated monthly sales potential, (8) competition level. Focus on niches with passionate buyers who purchase repeatedly and have emotional connections to the theme.",
+        "Generate 50 hyper-specific print-on-demand sub-niche ideas within [BROAD_NICHE]. These should be specific enough to have passionate buyers but not so narrow that there's no market. Example format: Instead of 'teachers', give me 'kindergarten teachers who love coffee' or 'math teachers with a sarcastic sense of humor'. For each sub-niche: suggest 3 specific product designs as text (write the actual quote/saying that would go on the design), recommend 2 products to put the design on, estimate buyer willingness to pay, and rate the competition level (low/medium/high).",
+        "Research the top 100 bestselling listings on Etsy in the [NICHE] print-on-demand category right now. Identify: (1) the 10 most common design themes/concepts, (2) the price range of bestsellers, (3) the most common product types (t-shirts, mugs, etc.), (4) what keywords appear most in their titles and tags, (5) what design styles dominate (minimalist, vintage, bold typography, illustrations), (6) any seasonal trends, (7) gaps in the market - what ISN'T being sold well that buyers want. Create a 'winning formula' summary I can use to guide my design strategy."
       ]
     },
     {
@@ -63,7 +78,12 @@
         "Minimalist designs",
         "Vintage styles"
       ],
-      "output": "designs/"
+      "output": "designs/",
+      "chatgpt_prompts": [
+        "You are a creative director for a successful print-on-demand business. Generate 20 specific, ready-to-design typography/quote designs for the [NICHE] niche. For each design: (1) write the exact text/quote to be used, (2) describe the font style that would work best, (3) suggest the design layout (centered, stacked, circular, etc.), (4) recommend color palette (give hex codes or descriptive color names), (5) describe any simple graphic elements to include, (6) specify which products it's best suited for (t-shirt, mug, tote bag, poster), (7) suggest the listing title for Etsy/Amazon. Make the quotes funny, heartwarming, relatable, or empowering - they should make the target buyer say 'that's SO me - I need this!'",
+        "Act as a Midjourney prompt expert specializing in print-on-demand designs. Create 15 detailed Midjourney prompts for [NICHE] designs that would work well on print-on-demand products. Each prompt should produce: (1) a clean design with transparent background potential, (2) imagery that resonates with [TARGET_AUDIENCE], (3) a style appropriate for the product (t-shirt art is different from poster art). For each prompt: write the complete Midjourney prompt text, describe the expected output, specify which products to use it on, and suggest complementary text to pair with the image. Include prompts for: cute illustrations, vintage style, watercolor style, minimalist line art, and bold graphic designs.",
+        "I'm creating designs for the [NICHE] POD niche. Generate design concepts for these 10 specific occasions/themes: [LIST_OCCASIONS]. For each occasion: (1) write 3 different slogan/quote options (funny, heartwarming, and sentimental), (2) describe a design concept that would work as an illustration, (3) suggest the color scheme that fits the mood, (4) recommend the top 3 products to put this design on, (5) write the Etsy listing title using high-search keywords. Make these designs feel premium and giftable - something people would buy for themselves AND as a gift."
+      ]
     },
     {
       "task_id": 3,
@@ -109,7 +129,11 @@
         "Set pricing (2.5-3x production cost)",
         "Publish across platforms"
       ],
-      "output": "listings.json"
+      "output": "listings.json",
+      "chatgpt_prompts": [
+        "You are an Etsy SEO expert specializing in print-on-demand shops. Write a complete, optimized Etsy listing for [PRODUCT_NAME] in the [NICHE] niche. Include: (1) Title (140 characters max, front-load primary keywords, include product type, niche, and occasion): write 3 title options, (2) Description (800-1,200 words covering: who this is for, what makes it special, size/quality details, care instructions, gifting suggestions, and natural keyword integration), (3) 13 tags (use all available - mix broad and long-tail keywords), (4) Price recommendation, (5) Shop section recommendation, (6) Shipping profile suggestions, (7) 5 SEO-optimized photo titles with alt text. The listing should rank for both broad and niche-specific Etsy searches while converting browsers into buyers.",
+        "Create an Amazon Merch listing for a [PRODUCT_TYPE] design featuring [DESIGN_DESCRIPTION] targeting [TARGET_AUDIENCE]. Write: (1) Product title (highly searchable, includes product type + design theme + gift occasion + audience), (2) Brand name (create a memorable brand name for this niche), (3) Feature bullet points (5 bullets: material quality, design description, fit/sizing, gift-ability, and brand promise), (4) Product description (200 words with natural keyword integration), (5) 7 backend keywords not in the listing. Also recommend: price point for maximum profit rank, which color options to offer first, and which product variations (Standard/Premium) to enable. Research-based on what converts best in this category."
+      ]
     },
     {
       "task_id": 6,
@@ -122,7 +146,7 @@
         "platform_fees": "Etsy 6.5% + $0.20, Shopify $29/mo",
         "ad_costs": "Estimate 10-20% of price",
         "profit_margin": "Target 30-40%",
-        "final_price": "Cost × 2.5 to 3"
+        "final_price": "Cost \u00d7 2.5 to 3"
       }
     },
     {
@@ -139,6 +163,10 @@
         "Run targeted ads",
         "Build email list",
         "Send promotional emails"
+      ],
+      "chatgpt_prompts": [
+        "Create a complete Pinterest marketing strategy for a print-on-demand Etsy shop in the [NICHE] niche. Include: (1) Board structure (10 boards with names and descriptions), (2) 30-day pinning schedule (5 pins per day with timing), (3) Pin description template with keyword-rich copy for product pins, (4) 20 non-product pin ideas that attract [TARGET_AUDIENCE] (tips, inspiration, lifestyle) to build following, (5) SEO keywords for Pinterest profile and boards, (6) Group board strategy for reach, (7) Promoted pin strategy if running ads, (8) How to repurpose POD product images into Pinterest-native content, (9) Seasonal content calendar for upcoming holidays/occasions. Pinterest drives massive organic traffic to Etsy - show me how to maximize this.",
+        "Write a complete Instagram content strategy for a print-on-demand shop targeting [NICHE]. Create: (1) Bio optimization (profile name, bio copy, link-in-bio strategy), (2) 30-day content calendar with daily post concepts, (3) Caption templates for product posts, lifestyle posts, and UGC repost, (4) Story sequence for product launches (10 story frames), (5) Reel ideas (10 concepts with scripts), (6) Hashtag strategy (30 hashtags categorized by size), (7) Engagement pod strategy to boost reach, (8) Influencer collaboration pitch template for micro-influencers in [NICHE], (9) Instagram Shopping setup optimization tips, (10) Ad campaign structure for retargeting website visitors."
       ]
     },
     {

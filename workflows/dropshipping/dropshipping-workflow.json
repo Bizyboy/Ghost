@@ -1,7 +1,16 @@
 {
   "workflow_name": "Dropshipping Automation",
   "description": "Complete automated dropshipping workflow using Shopify, Alibaba, and Amazon",
-  "platforms": ["Shopify", "Alibaba", "Amazon", "AliExpress", "Oberlo", "n8n", "ChatGPT", "Canva"],
+  "platforms": [
+    "Shopify",
+    "Alibaba",
+    "Amazon",
+    "AliExpress",
+    "Oberlo",
+    "n8n",
+    "ChatGPT",
+    "Canva"
+  ],
   "tasks": [
     {
       "task_id": 1,
@@ -16,7 +25,12 @@
         "Identify winning products with high demand and low competition",
         "Generate list of 10-20 potential products daily"
       ],
-      "output": "product_research_report.json"
+      "output": "product_research_report.json",
+      "chatgpt_prompts": [
+        "You are an expert dropshipping product researcher. Analyze the top trending products for dropshipping right now in the [NICHE] category. For each product, provide: (1) product name, (2) estimated retail price, (3) estimated supplier cost on AliExpress, (4) profit margin %, (5) competition level (low/medium/high), (6) monthly search volume estimate, (7) why it's trending, (8) ideal target audience. Return a ranked list of 15 products sorted by profit potential. Focus on products with 40%+ margins and low-to-medium competition.",
+        "Act as a dropshipping expert. I need you to identify 10 winning dropshipping products in the [NICHE] niche for [CURRENT_MONTH]. For each product: identify the pain point it solves, its wow factor, why customers would impulse buy it, the best platforms to sell on (Shopify/Amazon/eBay), and estimate the CPM advertising cost. Also suggest the best supplier regions and shipping time expectations.",
+        "Research and identify micro-niches within [BROAD_NICHE] that are underserved for dropshipping. List 5 specific micro-niches with: current monthly search trends, average order value potential, buyer demographics, seasonal demand patterns, and top 3 competitors. Recommend which micro-niche has the highest opportunity right now with lowest barrier to entry."
+      ]
     },
     {
       "task_id": 2,
@@ -47,7 +61,12 @@
         "Use Canva API to create product images and banners",
         "Import listings to Shopify via API"
       ],
-      "output": "shopify_products.json"
+      "output": "shopify_products.json",
+      "chatgpt_prompts": [
+        "You are a world-class Shopify copywriter and SEO expert. Create a complete product listing for [PRODUCT_NAME] targeting [TARGET_AUDIENCE]. Include: (1) SEO-optimized title (under 70 characters, include primary keyword), (2) compelling product description (300-500 words with emotional hooks, benefits, and features), (3) 5 bullet points highlighting key features, (4) FAQ section with 5 common customer questions and answers, (5) meta description (under 160 characters), (6) 10 relevant SEO tags. Write in a tone that creates urgency and desire while being honest and compliant with advertising standards.",
+        "Write a high-converting Shopify product description for [PRODUCT_NAME] priced at $[PRICE]. The target customer is [DEMOGRAPHIC]. Use the PAS copywriting formula (Problem-Agitate-Solution). Include: a powerful opening hook (first 2 sentences must grab attention), the main problem the product solves, emotional pain points, product benefits (not just features), social proof placeholder, guarantee statement, and strong call-to-action. Make it 400+ words and SEO-friendly for the keyword '[PRIMARY_KEYWORD]'.",
+        "Generate 10 SEO-optimized product title variations for [PRODUCT_NAME] for a Shopify store targeting [TARGET_KEYWORD]. Each title should: be under 70 characters, include the primary keyword naturally, convey a clear benefit or unique selling point, and be compelling enough to increase click-through rate. Also provide a primary keyword, 5 secondary keywords, and 3 long-tail keyword phrases for this product."
+      ]
     },
     {
       "task_id": 4,
@@ -77,7 +96,12 @@
         "Generate email marketing campaigns",
         "Create social media posts for product promotion"
       ],
-      "output": "marketing_assets/"
+      "output": "marketing_assets/",
+      "chatgpt_prompts": [
+        "You are an expert Facebook and Instagram ad copywriter who specializes in dropshipping products. Write 5 complete ad copy variations for [PRODUCT_NAME] targeting [TARGET_AUDIENCE]. For each variation include: (1) attention-grabbing headline (under 40 characters), (2) primary text (under 125 characters for best performance), (3) description text, (4) call-to-action button recommendation. Use different angles: problem/solution, social proof, urgency/scarcity, curiosity hook, and transformation story. Also suggest the 3 best audience interests to target on Facebook for this product.",
+        "Create a complete 7-day social media content calendar for promoting [PRODUCT_NAME] on Instagram, Facebook, and TikTok. For each day and platform, provide: post type (image/video/reel/story), caption (with hashtags), posting time, engagement hook, and call-to-action. Mix promotional content (30%) with value content (70%). Include trending audio suggestions for TikTok/Reels.",
+        "Write 3 email marketing sequences for [PRODUCT_NAME]: (1) A 3-email abandoned cart sequence with subject lines and full email bodies, (2) A 5-email post-purchase nurture sequence to increase reviews and repeat purchases, (3) A promotional email announcing a limited-time sale. Each email should have a compelling subject line, preview text, personalized opening, persuasive body, and clear CTA button text."
+      ]
     },
     {
       "task_id": 6,
@@ -108,7 +132,11 @@
         "Handle common queries (shipping, returns, tracking)",
         "Escalate complex issues to human review"
       ],
-      "output": "customer_support.log"
+      "output": "customer_support.log",
+      "chatgpt_prompts": [
+        "You are a professional customer support specialist for an e-commerce dropshipping store. Write comprehensive, empathetic, and brand-consistent responses to these 10 common customer inquiries: (1) 'Where is my order?', (2) 'My item arrived damaged', (3) 'I want to return/refund my purchase', (4) 'The product doesn't match the description', (5) 'My order hasn't arrived after 30 days', (6) 'Can I change my shipping address?', (7) 'I received the wrong item', (8) 'How do I track my package?', (9) 'Is this product safe/quality?', (10) 'Can I get a discount?'. Each response should be professional, resolve the issue, retain the customer, and protect the business.",
+        "Create a complete customer support FAQ document for a dropshipping store that sells [PRODUCT_CATEGORY]. Include 20 questions and detailed answers covering: shipping times, returns policy, product quality, order tracking, sizing/compatibility, payment security, international shipping, and customer rewards. Format it to be easily copied into a Shopify FAQ page or chatbot knowledge base."
+      ]
     },
     {
       "task_id": 8,
